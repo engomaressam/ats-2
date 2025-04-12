@@ -1,0 +1,1 @@
+pip install Flask python-dotenv pdf2image pytesseract pillow pandas openai
