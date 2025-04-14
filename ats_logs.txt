@@ -17826,3 +17826,21 @@ Skills: C#, SQL, WPF(MVVM), Python, HTML, CSS, JavaScript, Entity Framework, ASP
 2025-04-12 17:14:19,844 -  * Debugger PIN: 121-358-465
 2025-04-12 17:14:31,135 - 10.10.11.243 - - [12/Apr/2025 17:14:31] "GET / HTTP/1.1" 200 -
 2025-04-12 17:14:31,433 - 10.10.11.243 - - [12/Apr/2025 17:14:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 09:27:45,440 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-14 09:27:45,441 - [33mPress CTRL+C to quit[0m
+2025-04-14 09:27:45,443 -  * Restarting with stat
+2025-04-14 09:27:47,538 -  * Debugger is active!
+2025-04-14 09:27:47,541 -  * Debugger PIN: 443-502-652
+2025-04-14 09:31:40,912 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-14 09:31:40,912 - [33mPress CTRL+C to quit[0m
+2025-04-14 09:31:40,914 -  * Restarting with stat
+2025-04-14 09:31:43,038 -  * Debugger is active!
+2025-04-14 09:31:43,040 -  * Debugger PIN: 943-887-770
+2025-04-14 09:32:00,138 - 10.10.13.227 - - [14/Apr/2025 09:32:00] "GET / HTTP/1.1" 200 -
+2025-04-14 09:32:00,607 - 10.10.13.227 - - [14/Apr/2025 09:32:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
