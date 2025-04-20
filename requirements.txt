@@ -1,6 +1,7 @@
-flask
-openai>=1.0.0
-python-dotenv
+flask==3.0.2
+flask-cors==4.0.0
+psycopg2-binary==2.9.9
+python-dotenv==1.0.1
 pytesseract
 pdf2image
 Pillow

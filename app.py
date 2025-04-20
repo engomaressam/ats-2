@@ -16,6 +16,9 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Configure Tesseract path (update this to your Tesseract installation path)
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
 # Setup Flask and logging
 UPLOAD_FOLDER = 'uploads'
 app = Flask(__name__)
@@ -31,6 +34,8 @@ logging.basicConfig(
 # ---------- OCR Function ----------
 def extract_text_from_pdf(pdf_path):
     try:
+        # Print Tesseract path for debugging
+        print(f"Using Tesseract from: {pytesseract.pytesseract.tesseract_cmd}")
         images = convert_from_path(pdf_path, poppler_path=r"C:\poppler\Library\bin")
     except Exception as e:
         logging.error(f"❌ Failed to convert {pdf_path}: {e}")

@@ -17861,3 +17861,1051 @@ Skills: C#, SQL, WPF(MVVM), Python, HTML, CSS, JavaScript, Entity Framework, ASP
 2025-04-14 13:48:19,024 - 10.10.14.167 - - [14/Apr/2025 13:48:19] "GET / HTTP/1.1" 200 -
 2025-04-14 13:48:56,439 - 10.10.14.167 - - [14/Apr/2025 13:48:56] "GET / HTTP/1.1" 200 -
 2025-04-14 13:49:01,218 - 10.10.14.167 - - [14/Apr/2025 13:49:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 13:50:07,120 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-14 13:50:07,121 - [33mPress CTRL+C to quit[0m
+2025-04-14 13:50:07,123 -  * Restarting with stat
+2025-04-14 13:50:09,287 -  * Debugger is active!
+2025-04-14 13:50:09,289 -  * Debugger PIN: 443-502-652
+2025-04-14 13:50:31,858 - 10.10.14.167 - - [14/Apr/2025 13:50:31] "GET / HTTP/1.1" 200 -
+2025-04-14 13:51:13,972 - 10.10.14.167 - - [14/Apr/2025 13:51:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 13:51:56,374 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-14 13:51:56,374 - [33mPress CTRL+C to quit[0m
+2025-04-14 13:51:56,376 -  * Restarting with stat
+2025-04-14 13:51:58,523 -  * Debugger is active!
+2025-04-14 13:51:58,525 -  * Debugger PIN: 443-502-652
+2025-04-14 13:51:58,546 - 10.10.13.227 - - [14/Apr/2025 13:51:58] "GET / HTTP/1.1" 200 -
+2025-04-14 13:52:03,801 - 10.10.14.167 - - [14/Apr/2025 13:52:03] "GET / HTTP/1.1" 200 -
+2025-04-14 13:52:28,280 - 10.10.13.227 - - [14/Apr/2025 13:52:28] "GET / HTTP/1.1" 200 -
+2025-04-14 13:52:29,346 - 10.10.13.227 - - [14/Apr/2025 13:52:29] "GET / HTTP/1.1" 200 -
+2025-04-14 13:52:31,124 - 10.10.13.227 - - [14/Apr/2025 13:52:31] "GET / HTTP/1.1" 200 -
+2025-04-14 13:52:32,021 - 10.10.13.227 - - [14/Apr/2025 13:52:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 13:53:16,907 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-14 13:53:16,907 - [33mPress CTRL+C to quit[0m
+2025-04-14 13:53:16,909 -  * Restarting with stat
+2025-04-14 13:53:18,905 -  * Debugger is active!
+2025-04-14 13:53:18,907 -  * Debugger PIN: 443-502-652
+2025-04-14 13:53:24,949 - 10.10.14.167 - - [14/Apr/2025 13:53:24] "GET / HTTP/1.1" 200 -
+2025-04-14 13:53:40,057 - 10.10.13.227 - - [14/Apr/2025 13:53:40] "GET / HTTP/1.1" 200 -
+2025-04-14 13:53:44,605 - 10.10.13.227 - - [14/Apr/2025 13:53:44] "GET / HTTP/1.1" 200 -
+2025-04-14 13:53:45,291 - 10.10.13.227 - - [14/Apr/2025 13:53:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 13:54:16,344 - 10.10.14.24 - - [14/Apr/2025 13:54:16] "GET / HTTP/1.1" 200 -
+2025-04-14 13:54:16,692 - 10.10.14.24 - - [14/Apr/2025 13:54:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 14:07:07,867 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:07:08,101 -  * Restarting with stat
+2025-04-14 14:07:10,210 -  * Debugger is active!
+2025-04-14 14:07:10,212 -  * Debugger PIN: 443-502-652
+2025-04-14 14:12:47,474 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:12:47,670 -  * Restarting with stat
+2025-04-14 14:12:49,791 -  * Debugger is active!
+2025-04-14 14:12:49,793 -  * Debugger PIN: 443-502-652
+2025-04-14 14:18:17,160 - 10.10.14.167 - - [14/Apr/2025 14:18:17] "GET / HTTP/1.1" 200 -
+2025-04-14 14:30:59,789 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:31:00,012 -  * Restarting with stat
+2025-04-14 14:31:02,154 -  * Debugger is active!
+2025-04-14 14:31:02,156 -  * Debugger PIN: 443-502-652
+2025-04-14 14:31:49,335 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:31:49,541 -  * Restarting with stat
+2025-04-14 14:31:51,672 -  * Debugger is active!
+2025-04-14 14:31:51,674 -  * Debugger PIN: 443-502-652
+2025-04-14 14:41:19,745 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:41:19,930 -  * Restarting with stat
+2025-04-14 14:41:22,078 -  * Debugger is active!
+2025-04-14 14:41:22,080 -  * Debugger PIN: 443-502-652
+2025-04-14 14:41:56,212 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:41:56,372 -  * Restarting with stat
+2025-04-14 14:41:58,407 -  * Debugger is active!
+2025-04-14 14:41:58,409 -  * Debugger PIN: 443-502-652
+2025-04-14 14:46:04,322 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:46:04,495 -  * Restarting with stat
+2025-04-14 14:46:06,581 -  * Debugger is active!
+2025-04-14 14:46:06,583 -  * Debugger PIN: 443-502-652
+2025-04-14 14:46:25,668 -  * Detected change in 'C:\\ats\\process_pdfs.py', reloading
+2025-04-14 14:46:25,852 -  * Restarting with stat
+2025-04-14 14:46:27,985 -  * Debugger is active!
+2025-04-14 14:46:27,987 -  * Debugger PIN: 443-502-652
+2025-04-14 15:14:58,939 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:14:59,151 -  * Restarting with stat
+2025-04-14 15:15:01,245 -  * Debugger is active!
+2025-04-14 15:15:01,247 -  * Debugger PIN: 443-502-652
+2025-04-14 15:15:11,297 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:15:11,478 -  * Restarting with stat
+2025-04-14 15:15:13,611 -  * Debugger is active!
+2025-04-14 15:15:13,615 -  * Debugger PIN: 443-502-652
+2025-04-14 15:16:39,967 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:16:40,176 -  * Restarting with stat
+2025-04-14 15:16:42,290 -  * Debugger is active!
+2025-04-14 15:16:42,292 -  * Debugger PIN: 443-502-652
+2025-04-14 15:17:27,475 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:17:27,645 -  * Restarting with stat
+2025-04-14 15:17:29,754 -  * Debugger is active!
+2025-04-14 15:17:29,756 -  * Debugger PIN: 443-502-652
+2025-04-14 15:17:53,863 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:17:54,033 -  * Restarting with stat
+2025-04-14 15:17:56,100 -  * Debugger is active!
+2025-04-14 15:17:56,102 -  * Debugger PIN: 443-502-652
+2025-04-14 15:20:47,738 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:20:47,966 -  * Restarting with stat
+2025-04-14 15:20:50,164 -  * Debugger is active!
+2025-04-14 15:20:50,166 -  * Debugger PIN: 443-502-652
+2025-04-14 15:21:25,315 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:21:25,493 -  * Restarting with stat
+2025-04-14 15:21:27,594 -  * Debugger is active!
+2025-04-14 15:21:27,596 -  * Debugger PIN: 443-502-652
+2025-04-14 15:22:07,755 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:22:07,937 -  * Restarting with stat
+2025-04-14 15:22:10,006 -  * Debugger is active!
+2025-04-14 15:22:10,008 -  * Debugger PIN: 443-502-652
+2025-04-14 15:22:20,059 -  * Detected change in 'C:\\ats\\download_crm_cvs.py', reloading
+2025-04-14 15:22:20,252 -  * Restarting with stat
+2025-04-14 15:22:22,386 -  * Debugger is active!
+2025-04-14 15:22:22,388 -  * Debugger PIN: 443-502-652
+2025-04-15 14:56:34,073 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-15 14:56:34,074 - [33mPress CTRL+C to quit[0m
+2025-04-15 14:56:34,075 -  * Restarting with stat
+2025-04-15 14:56:36,380 -  * Debugger is active!
+2025-04-15 14:56:36,383 -  * Debugger PIN: 443-502-652
+2025-04-15 14:56:43,873 - 10.10.13.227 - - [15/Apr/2025 14:56:43] "GET / HTTP/1.1" 200 -
+2025-04-15 14:56:44,147 - 10.10.13.227 - - [15/Apr/2025 14:56:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 14:58:13,991 - User action: extract
+2025-04-15 14:58:24,784 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 14:58:24,788 - \U0001f4e5 Prompt:
+Extract the following fields from the resume:
+Name:
+Email:
+Phone:
+LinkedIn:
+Graduation Year:
+University:
+Skills:
+
+Resume Text:
+Personal Information:
+
+Experience:
+
+> Work Experience :
+
+Name: Abdelrahman Ashraf Ibrahim Ibrahim
+Address: 15 El Mithak st.,Imbaba,Giza
+E-Mail: Abdelrahman3597@Gmail.com
+
+Linkedin:https://www.linkedin.com/in/abdelrahman-ashraf-634575200
+Mobile: 01111001598 / 01061225092
+
+Birth Date: 22 March, 1997.
+
+Nationality: Egyptian.
+
+Specialization: Civil Engineering (Construction Management)
+Marital Status: Single.
+
+Army Status: Accomplished.
+
+Bachelor Degree of Civil Engineering Modern University for Technology and
+Information University ( MTI ) (May 2019).
+
+- Grade : Cumulative 88.25% Very Good (GPA:3.53/4).
+
+- Graduation Project: Construction Management (Grade: Excellent).
+
+The professional Program In Project Management (PRMG)
+
+at American University in Cairo with (GPA:3.9) — (Excellent)
+
+- Project Planning and Control Techniques (PRMG 010) (Grade: A)
+
+- Management of Project Resources (PRMG 020) - (Grade: A- )
+
+- Project Budgeting & Financial Control (PRMG 030) - ( Grade: A)
+
+- Projects Bids and Contracts (PRMG 080) - ( Grade: A)
+
+- Risk Management (PRMG 195 ) - (Grade : A- )
+
+- Application of Price Variations For Construction Projects(PRMG 197) - (Grade : A)
+
+Working at Madkour Group -
+Role: Planning engineer at HQ from (July 2023 — Till now)
+
+- Prepare tender schedule & detailed baseline schedule based on singed contract,
+drawings and BOQ.
+
+- Assign resources (manpower & man-hours) for all activities and draw Histograms
+& S-Curve.
+
+- Monitor day-to-day work progress and prepare the daily, weekly and monthly
+program and reports to client and top management.
+
+- Monitor the progress of the project at different stages of its development
+(Engineering, Procurement, Fabrication and Erection).
+
+- Prepare daily and weekly look ahead plan for the Execution team.
+
+- Participate in project meetings and discussions with the Client as required.
+
+- Notify the Client/Client’s representative in change of scope.
+
+- prepare recovery schedule & revised schedule.
+
+- Prepare delay analysis & claims.
+
+- Prepare project organization and communication charts.
+
+- Keep the Project Manager and others informed about project status and issues
+that may impact client relations.
+
+e Working at Al Wahah Integration Contracting -
+Role: Planning engineer from (July 2022 — June 2023)
+- Prepare, monitor and update the time Schedule and compare it with the project.
+- Prepare project Cash-flow and histograms on planning project.
+- Prepare weekly & monthly progress reports and labor histogram.
+- Coordinate and work with project management team, to resolve issues to ensure
+the delivery of the project work
+e Working at Harideco for Engineering & Contracting -
+Role: Site Technical office & Planning engineer from (June 2021 — June 2022)
+
+- Study and prepare tender documents.
+- Prepare vendor list for the project, orders Products from suppliers.
+- Prepare, monitor and update the time Schedule.
+- Prepare activities breakdown and financial analysis and project Cash-flow
+- Control all documents related to the work (reports - approvals - requests) and to
+be approved by the consultant, managing document control activities on site.
+- Prepare invoices for the project including subcontractor’s invoices.
+- Quantity Surveying.
+e Working at Development Research and Technological planning Center Cairo
+University - Role: Quality Control engineer from (June 2021 - April 2022)
+
+- Supervising Quality Engineer in factories (Lokma Group pipe Division) and
+
+(Future pipe industries FPI), to supervise the production of GRP pipes, mechanical tests
+
+(Axial tensile strength - hoop tensile strength - pipe stiffness), Barcol hardness
+
+, Hydrostatic test and a visual inspection to repair defects before loading them to the site.
+e Working at Al Emaar Company: midtown villa project in new capital
+
+- Role: Site Engineer from (Jan 2021 - May 2021)
+- Supervising construction works and making sure that will meet the deadline.
+
+- Checking & arranging equipment and materials before work.
+- Providing Technical advice and solving problems on site.
+- Prepare Site reports and fill in other paperwork.
+- Checking documents and drawings of the project.
+> Training :
+
+e The Arab Contractor Company (2018): Summer training for two months
+(construction management training).
+
+e El Salam Construction Company (2017): Summer training for two months
+(site training).
+
+Courses :
+
+Ministry of Housing, Utilities & Urban communities(2016): Summer training for
+two months.
+
+Delay Analysis & EOT Claim (2023) at Udemy (Eng. Ali Katary)
+
+Course duration 7 hrs. (Delay Analysis — FIDIC — Claims)
+
+Understanding & Implementation of Cost Management (2023) at Cost Lab
+Course duration 8 hrs. (Cost Estimation — Budgeting - Cash Flow — Cost Control
+— Cost Reports —- Manpower Productivity -Financial Claims — ERP System)
+Planning & Controlling Workshop (2023) at HA Management & Training
+Course duration 20 hrs. (Primavera — Excel — Update - Reports - Power Bi)
+Professional Planning Engineer Diploma at Pro Manger (2021)
+
+Course duration 25 hrs. (Construction Management — Primavera)
+Construction Management Diploma at Benaa Academy (2019):
+
+course duration 40 hrs. (Primavera - MS project - Bids & Contract)
+
+Microsoft Office (Word-Excel-Power point - ....)
+AutoCAD .
+
+Primavera .
+
+Ms Project .
+
+Power Bi
+2025-04-15 14:58:24,789 - \U0001f4e4 GPT Reply:
+Name: Abdelrahman Ashraf Ibrahim Ibrahim
+Email: Abdelrahman3597@Gmail.com
+Phone: 01111001598 / 01061225092
+LinkedIn: https://www.linkedin.com/in/abdelrahman-ashraf-634575200
+Graduation Year: May 2019
+University: Modern University for Technology and Information University (MTI)
+Skills: Construction Management, Project Management, Primavera, Microsoft Office, AutoCAD
+2025-04-15 14:58:24,909 - 10.10.13.227 - - [15/Apr/2025 14:58:24] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-04-15 14:58:25,029 - 10.10.13.227 - - [15/Apr/2025 14:58:25] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 14:58:25,035 - 10.10.13.227 - - [15/Apr/2025 14:58:25] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 14:58:25,180 - 10.10.13.227 - - [15/Apr/2025 14:58:25] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 14:58:26,268 - 10.10.12.201 - - [15/Apr/2025 14:58:26] "GET / HTTP/1.1" 200 -
+2025-04-15 14:58:27,443 - 10.10.12.201 - - [15/Apr/2025 14:58:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 15:00:46,179 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-15 15:00:46,179 - [33mPress CTRL+C to quit[0m
+2025-04-15 15:00:46,181 -  * Restarting with stat
+2025-04-15 15:00:48,464 -  * Debugger is active!
+2025-04-15 15:00:48,467 -  * Debugger PIN: 943-887-770
+2025-04-15 15:00:54,367 - 10.10.13.227 - - [15/Apr/2025 15:00:54] "GET / HTTP/1.1" 200 -
+2025-04-15 15:00:58,321 - User action: extract
+2025-04-15 15:00:59,191 - 10.10.13.227 - - [15/Apr/2025 15:00:59] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-04-15 15:00:59,284 - 10.10.13.227 - - [15/Apr/2025 15:00:59] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 15:00:59,292 - 10.10.13.227 - - [15/Apr/2025 15:00:59] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 15:00:59,347 - 10.10.13.227 - - [15/Apr/2025 15:00:59] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-15 15:02:26,830 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-15 15:02:26,831 - [33mPress CTRL+C to quit[0m
+2025-04-15 15:02:26,832 -  * Restarting with stat
+2025-04-15 15:02:29,155 -  * Debugger is active!
+2025-04-15 15:02:29,158 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:39,088 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-15 15:02:39,152 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-15 15:02:39,307 -  * Restarting with stat
+2025-04-15 15:02:39,380 -  * Restarting with stat
+2025-04-15 15:02:41,753 -  * Debugger is active!
+2025-04-15 15:02:41,756 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:41,836 -  * Debugger is active!
+2025-04-15 15:02:41,839 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:44,078 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-15 15:02:44,144 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-15 15:02:44,306 -  * Restarting with stat
+2025-04-15 15:02:44,378 -  * Restarting with stat
+2025-04-15 15:02:46,703 -  * Debugger is active!
+2025-04-15 15:02:46,706 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:46,819 -  * Debugger is active!
+2025-04-15 15:02:46,823 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:51,997 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-15 15:02:51,997 - [33mPress CTRL+C to quit[0m
+2025-04-15 15:02:51,999 -  * Restarting with stat
+2025-04-15 15:02:54,274 -  * Debugger is active!
+2025-04-15 15:02:54,277 -  * Debugger PIN: 943-887-770
+2025-04-15 15:02:55,199 - 10.10.13.227 - - [15/Apr/2025 15:02:55] "GET / HTTP/1.1" 200 -
+2025-04-15 15:02:58,523 - User action: extract
+2025-04-15 15:03:04,728 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 15:03:04,732 - \U0001f4e5 Prompt:
+Extract the following fields from the resume:
+Name:
+Email:
+Phone:
+LinkedIn:
+Graduation Year:
+University:
+Skills:
+
+Resume Text:
+Ahmed Tarek yousef
+Abo El Norms, Giza
+
+Mob: 01102226434 atarek194@qmail.com
+
+Work Experience:
+
+¢ Project Control engineer at PGESCo from 12/2021 till now
+
+1. Performs Contractors Schedule reviewing, approving, monitoring including identifying critical
+activities to ensure support milestones for total project or major portions of the project.
+Developing and updating of contractor individual schedules into the project integration
+construction/ Start up schedule.
+Analyze, & report project updates/schedules directly to site manager.
+Assist in preparing Critical Items Action Report.
+Assist project team in analyzing/evaluating time/cost claims & changes.
+Assist in preparing project progress monthly report to client and PGESCo management.
+
+N
+
+Oo
+
+¢ Project Control engineer at CPAS from 7/2021 till 12/2021
+1. Analysis the contract and determine the scope of each department.
+Prepare follow-up reports, to measure the progress of projects within the implementation.
+Helping the financial management to determine the cash in & out of the project
+Prepare project schedule covering entire scope and within defined timelines.
+Monitor the planning/scheduling activities with minimal or no supervisory oversight.
+Update the progress of the different projects and helping the project manager make
+correction actions
+* Technical office engineer at CPAS from 2/2021 to 7/2021
+1. Prepare BOQs
+2. Issue financial and technical reports
+3. Issue invoices for contracting
+¢ Site Engineer at Edge Holding from 12/2019 to 2/2021
+1. Monitor progress of the project & oversee the running operations of the construction project
+&make sure that it will meet the deadline.
+2. Day-to-day management of the site, including supervising and monitoring the site labor
+force and the work of any subcontractors.
+3. Checking technical designs and drawings to ensure that they are followed correctly.
+¢ Procurement engineer at HAZ Misr
+1. Contact with suppliers for marble and stones
+2. Contact with suppliers for marble fixing system elements
+3. Follow up with site engineers to ensure the delivery of materials.
+
+OaRwON:
+
+Education:
+¢ May 2019 B.S. In Civil Engineering, Cairo University with grade Good
+¢ Graduation Project: Construction management with grade “Excellent”
+It was a long learning journey last for six months, there are some of tasks we did
+
+1- Quantity surveying
+2- Method of construction for some items
+3- Baseline for the ordinary works
+4- Cash analysis for the baseline
+
+Courses:
+
+¢« Google Project Management: Professional Certificate
+
+1. Foundations of Project Management
+
+2. Project initiation: Starting a successful project
+
+3. Project Planning: Putting It All Together
+
+* Cost Analysis & Forecasting Technique in Construction Industry — (CAFT)
+The courses discuss the details of the processes required to manage the Cost and its
+integration with Time schedule to implement the full control on the Projects’
+Cost/Revenue and their projection in Construction Industry, by managing the flow of
+all Organization’s Resources, through the Process of Estimation Stage, Operation
+
+Stage, & Financial Stage.
+
+¢ Introduction to construction contract
+
+4. Selecting project delivery system, Contract type and Form.
+5. Selection Consultant, Contractor, and Subcontractor/consultant. Drafting, Reviewing,
+administrator and closing Consultant/Construction Contracts and Subcontracts
+
+agreement.
+
+6. Understand the different clauses and drafting the Particulars conditions.
+7. The difference between FIDIC and other organizations. Claims and Disputes resolution
+
+methods and handover, guarantee.
+
+¢« Construction Management at Calibers
+
+1. Contract analysis
+
+2. Quantity surveying
+
+3. Pricing the item in the BOQ
+
+4. Made a baseline for the project
+
+Summer Training
+- Trainee at Diaa Consult
+
+- Trainee at Cairo Oil Refining Company (CORC)
+
+* Trainee at EMAC
+¢ Trainee at DMG Academy
+
+Skills:
+
+Computer skills:
+1. AutoCAD 2019
+2. Primavera
+3. Touching type (Arabic & English)
+
+Language Skills:
+¢ Good at English (writing and speaking)
+
+Extra-Curricular activities
+* HR member at Khatwa Foundation at AUC
+* Trainee at ECHEM Company
+« Participant at GATE in CUFE
+* PR member at Nobel foundation
+
+4. Good at MS Office
+5. Power BI
+6. MS Project
+2025-04-15 15:03:04,733 - \U0001f4e4 GPT Reply:
+Name: Ahmed Tarek Yousef
+Email: atarek194@qmail.com
+Phone: 01102226434
+LinkedIn: (not provided in the resume)
+Graduation Year: May 2019
+University: Cairo University
+Skills: AutoCAD 2019, Primavera, Touching type (Arabic & English), MS Office, Power BI, MS Project
+2025-04-15 15:03:05,093 - 10.10.13.227 - - [15/Apr/2025 15:03:05] "POST / HTTP/1.1" 200 -
+2025-04-15 15:03:55,974 - 10.10.12.201 - - [15/Apr/2025 15:03:55] "GET / HTTP/1.1" 200 -
+2025-04-15 15:04:09,158 - 10.10.12.201 - - [15/Apr/2025 15:04:09] "GET / HTTP/1.1" 200 -
+2025-04-15 15:25:12,587 - 10.10.12.201 - - [15/Apr/2025 15:25:12] "GET / HTTP/1.1" 200 -
+2025-04-15 15:25:12,678 - 10.10.12.201 - - [15/Apr/2025 15:25:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-17 10:13:31,961 - 10.10.13.227 - - [17/Apr/2025 10:13:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-17 11:38:04,072 - 10.10.12.201 - - [17/Apr/2025 11:38:04] "GET / HTTP/1.1" 200 -
+2025-04-17 11:38:04,146 - 10.10.12.201 - - [17/Apr/2025 11:38:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-17 11:38:56,701 - User action: read
+2025-04-17 11:39:06,253 - 10.10.12.201 - - [17/Apr/2025 11:39:06] "POST / HTTP/1.1" 200 -
+2025-04-17 11:39:25,215 - User action: extract
+2025-04-17 11:39:36,056 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 11:39:36,061 - \U0001f4e5 Prompt:
+Extract the following fields from the resume:
+Name:
+Email:
+Phone:
+LinkedIn:
+Graduation Year:
+University:
+Skills:
+
+Resume Text:
+Hosny Fathallah Algattan, Ph.D., P.E-co, PMP
+
+Phone : +20224720655
+Mobile : +201005012510 & +201110054967
+
+E-Mail : hosnyfh.alqattan@gmail.com
+
+Add: Nasr city, Cairo, Egypt.
+
+Birth date: 1/5/1991 Nationality: Egyptian.
+Marital status: Married. Military status: Exempted.
+
+A dynamic and ambitious professional with a strong academic foundation in civil engineering
+and extensive experience in the construction industry. Holding a PhD and having successfully
+completed the PE and PMP exams, a high level of engineering and management qualification
+is held. In addition to Colorado state PE license.
+
+Varied roles have been undertaken, including site supervision, technical office man, planning,
+cost control, commercial, and managing multidisciplinary trades. Proficiency extends to
+structural design utilizing diverse software and systems for materials such as RC concrete,
+precast concrete, post-tensioned concrete, CMU, timber, steel, and light-gauge structures.
+Exposure to multiple markets, including the United States, Gulf region, and Egypt, has been
+gained.
+
+e 2024, Licensed professional engineer, Colorado, United states. (PE-CO)
+
+e 2024, Project management professional (PMP®)
+
+e 2023, Philosophy Doctorate (Ph.D.), Structure engineering, Ain Shams University.
+e 2022, Passed professional engineer (P.E. Civil/structure) exam.
+
+e 2021, Passed three CLEP exams to be equivalent to ABET programs.
+
+e 2020, Fundamentals of engineering exam (FE), NCEES.
+
+e 2018, Mater of Science (M.Sc.), Steel Structures, Ain Shams University.
+
+e 2013, B.Sc. in Civil/structure Engineering Faculty of Engineering Ain Shams University,
+Very-Good degree. Excellent degree in steel structure graduation project.
+
+Page 1 of 5
+
+e Resolve any technical issues or construction error that may arise in the site.
+e Organise Structural drawing and calculations.
+
+e Prepare Value-Engineering Proposals.
+
+e Quantity surveying, invoices, scheduling, cost estimation and cost control.
+e Shop-drawing prepare & review.
+
+e Working with BIM technology.
+
+e Prepare reports for PM, top management, client and other stakeholders.
+
+e Set a team development/training plan.
+
+e Coordinate between various teams and stakeholders.
+
+e Research and development.
+
+e Coordinate with Contract Administrators in assessing construction claims.
+
+e 05/2022 — Present.
+Concrete plus for engineering & construction
+
+Technical offices manager/ Project controls CS Concrete
+
+PLUS
+
+supervisor/Deputy project manager/Design manager.
+Urbanium new administrative building.
+
+Misr for Central Clearing building (WCDR).
+
+New Giza Art-life & B10 administrative.
+
+Urban business lane (UBL).
+
+e 07/2019 — 05/2022.
+
+SA. MIRO at U.S. /,
+Project Engineer. Z
+
+Design, SD, QS, planning & project management. y)
+Prescient Vanderbilt. (United States).
+Prescient 421 Pennsylvania. (United States). ESTABLISHED 1980
+
+Prescient LSU. (United States).
+Hurely Place phase 1. (United States.)
+Mill District. (United States).
+
+e 12/2018 -07/2019.
+EL RAEID Engineering Consults
+
+Team Leader Technical office & design. yy oN
+
+Design, SD, QS, planning & project management. EFI-RAFBFID
+
+Alhay Allatini. (Egypt). dpoaig i) ob Lica) aI
+Page 2 of 5
+
+Redcon Tower. (Egypt).
+Triple C Tower. (Egypt).
+Arab contractors Tower. (Egypt).
+
+e 02/2019 - 05/2019.
+Egyptian Chinese University (ECU). , = EC J
+Assistant Lecturer. y T T _ Schall yell Sata
+e 11/2015 - 11/2018.
+e.construct.
+Senior Structural Engineer.
+Design, SD, QS, planning & project management. e construct
+EXPO2020. (The United Arab Emirates). EE EAI ILOSL AS
+Dubai Textile City Souk. (The United Arab Emirates).
+New Sabah Al Ahmed Hospital. (Kuwait).
+Winchester international school. (The United Arab Emirates).
+Zaya Marriot Hotel. (The United Arab Emirates).
+
+e 05/2015 — 11/2015.
+Alamar Consulting group S.A.
+£ ) iF ‘onsaltin SA.
+Structure & BIM Engineer. ) Pt ceili Remescerse,
+Design, SD, QS, planning & project management.
+Governmental services Buildings. (Sultanate of Oman).
+
+e 07/2013 - 05/2015.
+Saad International Consulting Engineering (SICE).
+Structure & technical office Engineer.
+Design, SD, QS, planning & project management.
+
+King Abdelaziz bridge. (Kingdom of Saudi Arabia). SICE
+Aloroba bridge. (Kingdom of Saudi Arabia) adele roared
+
+Alkebash bridge. (Egypt).
+Al-Bayt Stadium. (Qatar).
+
+e 07/2012 — 09/2012 .
+Orascom Construction PLC. pyri elren
+Site engineer Internship.
+
+Alshahed bridge. (Egypt).
+
+Page 3 of 5
+
+e 07/2011 —- 09/2011.
+Arab contractors.
+Site engineer Internship.
+
+Green Mountain towers. (Egypt). 4, alliglol_—doll
+bal
+
+e Passion for continuous learning and development.
+
+e Positive attitude, ability to plan, organizes, monitor & control.
+e Direct supervise & lead stuff successfully & smoothly.
+
+e Deep experience in Remote working tools and techniques.
+
+e Analysing lots of information from different sources.
+
+e High Caliber leadership skills, managing multiple nationalities on a major programme.
+
+e In-Depth Look at Positive Psychology diploma.
+
+e Raising Emotional Intelligence course.
+
+e Cost analysis and forecasting techniques for construction projects. (CAFT)
+e Planning, scheduling & reporting using Primavera P6.
+
+e Tendering and cost estimation.
+
+e (MEP) Electromechanical basics.
+
+e Revit structure & Tekla structures.
+
+e Finite element & design software:
+CSI: SAP2000, ETABS, SAFE & CSI Bridge.
+Bentley: RAM Concept, RAM Structural system & STAAD.Pro.
+RISA: RISA Floor, RISA 3D & beginner level ADAPT-Builder. Concise beam.
+
+e Advanced FEM: Abaqus CAE.
+e BIM software: Autodesk: Revit & Trimble: TEKLA.
+e ORACLE: Primavera P6.
+
+e Drafting software:
+Autodesk: AutoCAD & Autocad structure detailing.
+
+e Ms Office.
+
+Page 4 of 5
+
+ACADEMIC CONTRIBUTIONS
+
+e Algattan Hosny et al. (2024). Experimental Investigation and Analytical Modeling of Steel
+Falsework Systems. Structures Journal/Elsevier.
+
+e Algattan Hosny et al. (2024). Enhancing sustainability in construction: experimental testing
+and finite element investigation of falsework ring-lock joints. Innovative Infrastructure
+Solutions Journal/Springer nature.
+
+e Algattan, Hosny & El Aghoury, Ihab & Ibrahim, Sherif. (2023). Stability and Design of Steel
+Falsework Systems. Ph.D. Thesis. Department of Structural Engineering, Ain Shams
+University, Cairo, Egypt.
+
+e Algattan Hosny et al. (2023). Numerical evaluation of wedge-type falsework joint. Asian
+Journal of Civil Engineering/Springer nature.
+
+e Algattan, Hosny & Shaat, Amr & El-Serwi, Ahmed & Sayed-Ahmed, Ezzeldin. (2018).
+Composite Steel-Concrete Beams with Corrugated Steel Webs. M.Sc. Thesis.
+Department of Structural Engineering, Ain Shams University, Cairo, Egypt.
+
+e Algattan Hosny et al. (2018). Effect of corrugation panel width of composite plate girders
+with corrugated triangular web. Journal Al-Azhar University, Engineering Sector.
+
+ACADEMIC & TEACHING EXPERIENCE
+
+e Assistant Lecturer in Egyptian Chinese University (ECU).
+
+e Training lecturer and technical planning of (YLF-Learning expert programme) for more than
+600 trainees undergraduate & fresh engineers.
+
+e Certified trainer in General Authority for Roads and Bridges/training center.
+
+e Training & development specialist for various firms.
+
+e English: Good in spoken and written.
+e Italian: (high.s) 2nd language.
+
+e Arabic: Mother language.
+
+LINKEDIN PROFILE
+
+e https://www.linkedin.com/in/hosny-fathalla-ph-d-p-e-pmp-8528b79b
+
+Page 5 of 5
+2025-04-17 11:39:36,061 - \U0001f4e4 GPT Reply:
+Name: Hosny Fathallah Algattan, Ph.D., P.E-co, PMP
+Email: hosnyfh.alqattan@gmail.com
+Phone: +20224720655 (Mobile: +201005012510 & +201110054967)
+LinkedIn: https://www.linkedin.com/in/hosny-fathalla-ph-d-p-e-pmp-8528b79b
+Graduation Year: 2023 (Ph.D.), 2018 (M.Sc.), 2013 (B.Sc.)
+University: Ain Shams University
+Skills: Civil Engineering, Project Management, Structural Design, Construction Management, BIM Technology, Primavera P6, AutoCAD, Revit, Tekla Structures, FEM Analysis
+2025-04-17 11:39:36,087 - 10.10.12.201 - - [17/Apr/2025 11:39:36] "POST / HTTP/1.1" 200 -
+2025-04-17 11:40:11,263 - User action: summarize
+2025-04-17 11:40:21,159 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 11:40:21,161 - \U0001f4e5 Prompt:
+Summarize the following resume in 1-2 professional lines:
+
+Hosny Fathallah Algattan, Ph.D., P.E-co, PMP
+
+Phone : +20224720655
+Mobile : +201005012510 & +201110054967
+
+E-Mail : hosnyfh.alqattan@gmail.com
+
+Add: Nasr city, Cairo, Egypt.
+
+Birth date: 1/5/1991 Nationality: Egyptian.
+Marital status: Married. Military status: Exempted.
+
+A dynamic and ambitious professional with a strong academic foundation in civil engineering
+and extensive experience in the construction industry. Holding a PhD and having successfully
+completed the PE and PMP exams, a high level of engineering and management qualification
+is held. In addition to Colorado state PE license.
+
+Varied roles have been undertaken, including site supervision, technical office man, planning,
+cost control, commercial, and managing multidisciplinary trades. Proficiency extends to
+structural design utilizing diverse software and systems for materials such as RC concrete,
+precast concrete, post-tensioned concrete, CMU, timber, steel, and light-gauge structures.
+Exposure to multiple markets, including the United States, Gulf region, and Egypt, has been
+gained.
+
+e 2024, Licensed professional engineer, Colorado, United states. (PE-CO)
+
+e 2024, Project management professional (PMP®)
+
+e 2023, Philosophy Doctorate (Ph.D.), Structure engineering, Ain Shams University.
+e 2022, Passed professional engineer (P.E. Civil/structure) exam.
+
+e 2021, Passed three CLEP exams to be equivalent to ABET programs.
+
+e 2020, Fundamentals of engineering exam (FE), NCEES.
+
+e 2018, Mater of Science (M.Sc.), Steel Structures, Ain Shams University.
+
+e 2013, B.Sc. in Civil/structure Engineering Faculty of Engineering Ain Shams University,
+Very-Good degree. Excellent degree in steel structure graduation project.
+
+Page 1 of 5
+
+e Resolve any technical issues or construction error that may arise in the site.
+e Organise Structural drawing and calculations.
+
+e Prepare Value-Engineering Proposals.
+
+e Quantity surveying, invoices, scheduling, cost estimation and cost control.
+e Shop-drawing prepare & review.
+
+e Working with BIM technology.
+
+e Prepare reports for PM, top management, client and other stakeholders.
+
+e Set a team development/training plan.
+
+e Coordinate between various teams and stakeholders.
+
+e Research and development.
+
+e Coordinate with Contract Administrators in assessing construction claims.
+
+e 05/2022 — Present.
+Concrete plus for engineering & construction
+
+Technical offices manager/ Project controls CS Concrete
+
+PLUS
+
+supervisor/Deputy project manager/Design manager.
+Urbanium new administrative building.
+
+Misr for Central Clearing building (WCDR).
+
+New Giza Art-life & B10 administrative.
+
+Urban business lane (UBL).
+
+e 07/2019 — 05/2022.
+
+SA. MIRO at U.S. /,
+Project Engineer. Z
+
+Design, SD, QS, planning & project management. y)
+Prescient Vanderbilt. (United States).
+Prescient 421 Pennsylvania. (United States). ESTABLISHED 1980
+
+Prescient LSU. (United States).
+Hurely Place phase 1. (United States.)
+Mill District. (United States).
+
+e 12/2018 -07/2019.
+EL RAEID Engineering Consults
+
+Team Leader Technical office & design. yy oN
+
+Design, SD, QS, planning & project management. EFI-RAFBFID
+
+Alhay Allatini. (Egypt). dpoaig i) ob Lica) aI
+Page 2 of 5
+
+Redcon Tower. (Egypt).
+Triple C Tower. (Egypt).
+Arab contractors Tower. (Egypt).
+
+e 02/2019 - 05/2019.
+Egyptian Chinese University (ECU). , = EC J
+Assistant Lecturer. y T T _ Schall yell Sata
+e 11/2015 - 11/2018.
+e.construct.
+Senior Structural Engineer.
+Design, SD, QS, planning & project management. e construct
+EXPO2020. (The United Arab Emirates). EE EAI ILOSL AS
+Dubai Textile City Souk. (The United Arab Emirates).
+New Sabah Al Ahmed Hospital. (Kuwait).
+Winchester international school. (The United Arab Emirates).
+Zaya Marriot Hotel. (The United Arab Emirates).
+
+e 05/2015 — 11/2015.
+Alamar Consulting group S.A.
+£ ) iF ‘onsaltin SA.
+Structure & BIM Engineer. ) Pt ceili Remescerse,
+Design, SD, QS, planning & project management.
+Governmental services Buildings. (Sultanate of Oman).
+
+e 07/2013 - 05/2015.
+Saad International Consulting Engineering (SICE).
+Structure & technical office Engineer.
+Design, SD, QS, planning & project management.
+
+King Abdelaziz bridge. (Kingdom of Saudi Arabia). SICE
+Aloroba bridge. (Kingdom of Saudi Arabia) adele roared
+
+Alkebash bridge. (Egypt).
+Al-Bayt Stadium. (Qatar).
+
+e 07/2012 — 09/2012 .
+Orascom Construction PLC. pyri elren
+Site engineer Internship.
+
+Alshahed bridge. (Egypt).
+
+Page 3 of 5
+
+e 07/2011 —- 09/2011.
+Arab contractors.
+Site engineer Internship.
+
+Green Mountain towers. (Egypt). 4, alliglol_—doll
+bal
+
+e Passion for continuous learning and development.
+
+e Positive attitude, ability to plan, organizes, monitor & control.
+e Direct supervise & lead stuff successfully & smoothly.
+
+e Deep experience in Remote working tools and techniques.
+
+e Analysing lots of information from different sources.
+
+e High Caliber leadership skills, managing multiple nationalities on a major programme.
+
+e In-Depth Look at Positive Psychology diploma.
+
+e Raising Emotional Intelligence course.
+
+e Cost analysis and forecasting techniques for construction projects. (CAFT)
+e Planning, scheduling & reporting using Primavera P6.
+
+e Tendering and cost estimation.
+
+e (MEP) Electromechanical basics.
+
+e Revit structure & Tekla structures.
+
+e Finite element & design software:
+CSI: SAP2000, ETABS, SAFE & CSI Bridge.
+Bentley: RAM Concept, RAM Structural system & STAAD.Pro.
+RISA: RISA Floor, RISA 3D & beginner level ADAPT-Builder. Concise beam.
+
+e Advanced FEM: Abaqus CAE.
+e BIM software: Autodesk: Revit & Trimble: TEKLA.
+e ORACLE: Primavera P6.
+
+e Drafting software:
+Autodesk: AutoCAD & Autocad structure detailing.
+
+e Ms Office.
+
+Page 4 of 5
+
+ACADEMIC CONTRIBUTIONS
+
+e Algattan Hosny et al. (2024). Experimental Investigation and Analytical Modeling of Steel
+Falsework Systems. Structures Journal/Elsevier.
+
+e Algattan Hosny et al. (2024). Enhancing sustainability in construction: experimental testing
+and finite element investigation of falsework ring-lock joints. Innovative Infrastructure
+Solutions Journal/Springer nature.
+
+e Algattan, Hosny & El Aghoury, Ihab & Ibrahim, Sherif. (2023). Stability and Design of Steel
+Falsework Systems. Ph.D. Thesis. Department of Structural Engineering, Ain Shams
+University, Cairo, Egypt.
+
+e Algattan Hosny et al. (2023). Numerical evaluation of wedge-type falsework joint. Asian
+Journal of Civil Engineering/Springer nature.
+
+e Algattan, Hosny & Shaat, Amr & El-Serwi, Ahmed & Sayed-Ahmed, Ezzeldin. (2018).
+Composite Steel-Concrete Beams with Corrugated Steel Webs. M.Sc. Thesis.
+Department of Structural Engineering, Ain Shams University, Cairo, Egypt.
+
+e Algattan Hosny et al. (2018). Effect of corrugation panel width of composite plate girders
+with corrugated triangular web. Journal Al-Azhar University, Engineering Sector.
+
+ACADEMIC & TEACHING EXPERIENCE
+
+e Assistant Lecturer in Egyptian Chinese University (ECU).
+
+e Training lecturer and technical planning of (YLF-Learning expert programme) for more than
+600 trainees undergraduate & fresh engineers.
+
+e Certified trainer in General Authority for Roads and Bridges/training center.
+
+e Training & development specialist for various firms.
+
+e English: Good in spoken and written.
+e Italian: (high.s) 2nd language.
+
+e Arabic: Mother language.
+
+LINKEDIN PROFILE
+
+e https://www.linkedin.com/in/hosny-fathalla-ph-d-p-e-pmp-8528b79b
+
+Page 5 of 5
+2025-04-17 11:40:21,161 - \U0001f4e4 GPT Reply:
+Dynamic and ambitious civil engineer with a Ph.D., P.E-co, and PMP certification, offering extensive experience in construction industry and strong academic foundation. Proficient in structural design and management, with a track record of successful projects in the United States, Gulf region, and Egypt.
+2025-04-17 11:40:21,184 - 10.10.12.201 - - [17/Apr/2025 11:40:21] "POST / HTTP/1.1" 200 -
+2025-04-20 13:06:34,997 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:06:35,090 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:06:35,204 -  * Restarting with stat
+2025-04-20 13:06:35,334 -  * Restarting with stat
+2025-04-20 13:06:35,396 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:06:35,677 -  * Restarting with stat
+2025-04-20 13:06:40,446 -  * Debugger is active!
+2025-04-20 13:06:40,446 -  * Debugger is active!
+2025-04-20 13:06:40,446 -  * Debugger is active!
+2025-04-20 13:06:40,450 -  * Debugger PIN: 943-887-770
+2025-04-20 13:06:40,450 -  * Debugger PIN: 943-887-770
+2025-04-20 13:06:40,450 -  * Debugger PIN: 943-887-770
+2025-04-20 13:07:10,079 -  * Detected change in 'C:\\ats\\02.process_pdfs.py', reloading
+2025-04-20 13:07:10,117 -  * Detected change in 'C:\\ats\\02.process_pdfs.py', reloading
+2025-04-20 13:07:10,298 -  * Restarting with stat
+2025-04-20 13:07:10,346 -  * Restarting with stat
+2025-04-20 13:07:10,999 -  * Detected change in 'C:\\ats\\02.process_pdfs.py', reloading
+2025-04-20 13:07:11,205 -  * Restarting with stat
+2025-04-20 13:07:12,707 -  * Debugger is active!
+2025-04-20 13:07:12,711 -  * Debugger PIN: 943-887-770
+2025-04-20 13:07:12,747 -  * Debugger is active!
+2025-04-20 13:07:12,750 -  * Debugger PIN: 943-887-770
+2025-04-20 13:07:13,504 -  * Debugger is active!
+2025-04-20 13:07:13,507 -  * Debugger PIN: 943-887-770
+2025-04-20 13:27:49,926 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:27:49,949 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:27:50,082 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:27:50,148 -  * Restarting with stat
+2025-04-20 13:27:50,194 -  * Restarting with stat
+2025-04-20 13:27:50,309 -  * Restarting with stat
+2025-04-20 13:27:52,592 -  * Debugger is active!
+2025-04-20 13:27:52,595 -  * Debugger PIN: 943-887-770
+2025-04-20 13:27:52,615 -  * Debugger is active!
+2025-04-20 13:27:52,619 -  * Debugger PIN: 943-887-770
+2025-04-20 13:27:52,717 -  * Debugger is active!
+2025-04-20 13:27:52,720 -  * Debugger PIN: 943-887-770
+2025-04-20 13:28:41,804 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:28:41,983 -  * Restarting with stat
+2025-04-20 13:28:42,685 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:28:42,873 -  * Restarting with stat
+2025-04-20 13:28:44,286 -  * Debugger is active!
+2025-04-20 13:28:44,290 -  * Debugger PIN: 943-887-770
+2025-04-20 13:28:45,193 -  * Debugger is active!
+2025-04-20 13:28:45,196 -  * Debugger PIN: 943-887-770
+2025-04-20 13:28:59,422 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:28:59,590 -  * Detected change in 'C:\\ats\\update_existing_cvs.py', reloading
+2025-04-20 13:28:59,604 -  * Restarting with stat
+2025-04-20 13:28:59,775 -  * Restarting with stat
+2025-04-20 13:29:01,959 -  * Debugger is active!
+2025-04-20 13:29:01,962 -  * Debugger PIN: 943-887-770
+2025-04-20 13:29:02,117 -  * Debugger is active!
+2025-04-20 13:29:02,120 -  * Debugger PIN: 943-887-770
