@@ -2,6 +2,7 @@ import os
 import psycopg2
 from openai import OpenAI
 from dotenv import load_dotenv
+import json
 
 # Load environment variables and setup OpenAI
 load_dotenv()
@@ -37,42 +38,53 @@ def setup_database():
 
 def extract_additional_info(ocr_text):
     prompt = """Extract the following information from the resume text. Format the response as a strict JSON object with string values only. All values must be strings, not arrays or objects.
+
+Rules:
+1. Department MUST be exactly one of these (no variations allowed):
+   - IT Department
+   - Technical Office Department
+   - Quality Control Department
+   - Construction Department
+   - Design Department
+   - MEP Department
+   - Architecture Department
+   - Contracts Department
+   - Planning Department
+   - HSE Department
+   - HR Department
+   - Other
+
+2. Job_Title MUST be one of these (remove any seniority levels like 'Senior', 'Lead', 'Junior', etc.):
+   - Civil Engineer
+   - Architect
+   - MEP Engineer
+   - Project Manager
+   - Construction Manager
+   - Quality Engineer
+   - Safety Engineer
+   - Quantity Surveyor
+   - Planning Engineer
+   - Site Engineer
+   - Technical Office Engineer
+   - BIM Engineer
+   - Mechanical Engineer
+   - Electrical Engineer
+   - Contracts Engineer
+   - Cost Control Engineer
+   - HR Specialist
+   - Other
+
+Expected JSON format:
 {
-    "Department": "Determine the most likely department (e.g., IT Department, Technical Office, etc.)",
-    "Job_Title": "Extract the main job title without seniority levels",
-    "Years_of_Experience": "Total years of experience as a string",
-    "Current_Company": "Current or most recent company",
-    "Location": "City/Location",
-    "Languages": "Language proficiencies as comma-separated string",
-    "Certifications": "Professional certifications as comma-separated string",
-    "Project_Types": "Types of projects as comma-separated string"
+    "Department": "MUST be from the exact list above",
+    "Job_Title": "MUST be from the exact list above, without seniority levels",
+    "Years_of_Experience": "Number as string (e.g., '5')",
+    "Current_Company": "Company name",
+    "Location": "City, Country",
+    "Languages": "Languages as comma-separated string",
+    "Certifications": "Certifications as comma-separated string",
+    "Project_Types": "Project types as comma-separated string"
 }
-
-For Department, use ONLY these exact strings:
-- IT Department
-- Technical Office Department
-- Quality Control Department
-- Construction Department
-- Design Department
-- MEP Department
-- Architecture Department
-- Contracts Department
-- Planning Department
-- HSE Department
-- Other
-
-For Job_Title, use ONLY these exact strings:
-- Civil Engineer
-- Architect
-- MEP Engineer
-- Project Manager
-- Construction Manager
-- Quality Engineer
-- Safety Engineer
-- Quantity Surveyor
-- Planning Engineer
-- Site Engineer
-- Other
 
 Resume Text:
 """ + ocr_text
@@ -81,12 +93,59 @@ Resume Text:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a resume parser that outputs only valid JSON with string values. Never use arrays or nested objects. Use comma-separated strings instead."},
+                {"role": "system", "content": "You are a resume parser that outputs only valid JSON with string values. Never use arrays or nested objects. Use comma-separated strings instead. You MUST use exact values from the provided lists for Department and Job_Title fields."},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.1  # Lower temperature for more consistent outputs
+            temperature=0.1  # Low temperature for consistent outputs
         )
-        return response.choices[0].message.content.strip()
+        
+        # Get the response
+        result = response.choices[0].message.content.strip()
+        
+        # Validate and clean the response
+        try:
+            data = json.loads(result)
+            
+            # Validate Department
+            valid_departments = {
+                "IT Department", "Technical Office Department", "Quality Control Department",
+                "Construction Department", "Design Department", "MEP Department",
+                "Architecture Department", "Contracts Department", "Planning Department",
+                "HSE Department", "HR Department", "Other"
+            }
+            if data['Department'] not in valid_departments:
+                data['Department'] = "Other"
+            
+            # Clean and validate Job_Title
+            job_title = data['Job_Title']
+            # Remove seniority levels
+            for prefix in ['Senior ', 'Lead ', 'Junior ', 'Chief ', 'Head ', 'Principal ']:
+                job_title = job_title.replace(prefix, '')
+            
+            valid_job_titles = {
+                "Civil Engineer", "Architect", "MEP Engineer", "Project Manager",
+                "Construction Manager", "Quality Engineer", "Safety Engineer",
+                "Quantity Surveyor", "Planning Engineer", "Site Engineer",
+                "Technical Office Engineer", "BIM Engineer", "Mechanical Engineer",
+                "Electrical Engineer", "Contracts Engineer", "Cost Control Engineer",
+                "HR Specialist", "Other"
+            }
+            if job_title not in valid_job_titles:
+                job_title = "Other"
+            
+            data['Job_Title'] = job_title
+            
+            # Ensure all values are strings
+            for key in data:
+                if not isinstance(data[key], str):
+                    data[key] = str(data[key])
+            
+            return json.dumps(data, ensure_ascii=False)
+            
+        except json.JSONDecodeError:
+            print(f"Invalid JSON response: {result}")
+            return None
+            
     except Exception as e:
         print(f"Error in AI extraction: {e}")
         return None
@@ -103,11 +162,12 @@ def update_records():
             FROM pdf_extracted_data 
             WHERE department IS NULL 
             OR job_title IS NULL
-            LIMIT 40
         """)
         records = cursor.fetchall()
         
         print(f"Found {len(records)} records to update")
+        successful_updates = 0
+        failed_updates = 0
         
         for record_id, ocr_text, filename in records:
             print(f"\nProcessing record {record_id} - File: {filename}")
@@ -115,17 +175,12 @@ def update_records():
             # Extract new information
             info = extract_additional_info(ocr_text)
             if not info:
-                print(f"Skipping record {record_id} - extraction failed")
+                print(f"❌ Skipping record {record_id} - extraction failed")
+                failed_updates += 1
                 continue
             
             try:
-                import json
                 data = json.loads(info)
-                
-                # Ensure all values are strings
-                for key in data:
-                    if not isinstance(data[key], str):
-                        data[key] = str(data[key])
                 
                 # Print extracted info for verification
                 print(f"Raw AI response: {info}")
@@ -158,15 +213,18 @@ def update_records():
                 ))
                 conn.commit()
                 print(f"✓ Successfully updated record {record_id}")
+                successful_updates += 1
                 
             except json.JSONDecodeError as e:
                 print(f"❌ Invalid JSON for record {record_id}")
                 print(f"Error details: {str(e)}")
                 print(f"Raw response: {info}")
+                failed_updates += 1
                 continue
             except Exception as e:
                 print(f"❌ Error updating record {record_id}: {e}")
                 print(f"Data that caused error: {data if 'data' in locals() else 'No data available'}")
+                failed_updates += 1
                 continue
                 
     except Exception as e:
@@ -175,7 +233,10 @@ def update_records():
         cursor.close()
         conn.close()
         
-    print("\nProcessing complete. Review the results above and adjust the prompt if needed.")
+    print("\nProcessing complete:")
+    print(f"✓ Successfully updated: {successful_updates} records")
+    print(f"❌ Failed updates: {failed_updates} records")
+    print(f"Total processed: {successful_updates + failed_updates} records")
 
 if __name__ == "__main__":
     update_records() 

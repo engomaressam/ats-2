@@ -3,7 +3,7 @@ import re
 import json
 import uuid
 from dotenv import load_dotenv
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, flash, redirect, url_for
 from werkzeug.utils import secure_filename
 from pdf2image import convert_from_path
 from PIL import Image
@@ -11,10 +11,14 @@ import pytesseract
 import pandas as pd
 import logging
 from openai import OpenAI
+import requests
 
 # Load environment variables and setup OpenAI
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# API Service URL
+API_URL = 'http://localhost:5000'
 
 # Configure Tesseract path (update this to your Tesseract installation path)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -23,6 +27,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 UPLOAD_FOLDER = 'uploads'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.secret_key = 'your-secret-key-here'  # Added for flash messages
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 logging.basicConfig(
@@ -147,6 +152,79 @@ def index():
 @app.route('/download')
 def download_file():
     return send_file("Parsed_CVs.xlsx", as_attachment=True)
+
+@app.route('/search')
+def search():
+    keywords = request.args.get('keywords', '')
+    department = request.args.get('department', '')
+    job_title = request.args.get('job_title', '')
+
+    # Get departments and job titles for filters
+    departments_response = requests.get(f'{API_URL}/api/departments')
+    job_titles_response = requests.get(f'{API_URL}/api/job-titles')
+    
+    departments = departments_response.json() if departments_response.ok else []
+    job_titles = job_titles_response.json() if job_titles_response.ok else []
+
+    # Build search URL with parameters
+    search_params = {}
+    if keywords:
+        search_params['keywords'] = keywords
+    if department:
+        search_params['department'] = department
+    if job_title:
+        search_params['job_title'] = job_title
+
+    # Make API request
+    response = requests.get(f'{API_URL}/api/search', params=search_params)
+    
+    if response.ok:
+        results = response.json()
+        return render_template('search.html', 
+                             results=results.get('results', []),
+                             count=results.get('count', 0),
+                             keywords=keywords,
+                             department=department,
+                             job_title=job_title,
+                             departments=departments,
+                             job_titles=job_titles)
+    else:
+        flash('Error searching CVs: ' + response.json().get('error', 'Unknown error'))
+        return render_template('search.html', 
+                             results=[],
+                             count=0,
+                             keywords=keywords,
+                             department=department,
+                             job_title=job_title,
+                             departments=departments,
+                             job_titles=job_titles)
+
+@app.route('/cv/<int:cv_id>')
+def view_cv(cv_id):
+    # Get CV details from API
+    response = requests.get(f'{API_URL}/api/cv/details/{cv_id}')
+    
+    if response.ok:
+        cv_data = response.json()
+        return render_template('view_cv.html', cv=cv_data)
+    else:
+        flash('Error retrieving CV details: ' + response.json().get('error', 'Unknown error'))
+        return redirect(url_for('search'))
+
+@app.route('/cv/file/<path:filename>')
+def get_cv_file(filename):
+    response = requests.get(f'{API_URL}/api/cv/{filename}', stream=True)
+    
+    if response.ok:
+        return send_file(
+            response.raw,
+            mimetype='application/pdf',
+            as_attachment=True,
+            download_name=filename
+        )
+    else:
+        flash('Error downloading CV file: ' + response.json().get('error', 'Unknown error'))
+        return redirect(url_for('search'))
 
 # ---------- Field Extraction Helper ----------
 def extract_field(field, text):

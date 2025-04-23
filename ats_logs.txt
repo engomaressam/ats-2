@@ -18909,3 +18909,795 @@ Dynamic and ambitious civil engineer with a Ph.D., P.E-co, and PMP certification
 2025-04-20 13:29:01,962 -  * Debugger PIN: 943-887-770
 2025-04-20 13:29:02,117 -  * Debugger is active!
 2025-04-20 13:29:02,120 -  * Debugger PIN: 943-887-770
+2025-04-20 16:07:51,477 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-20 16:07:51,477 - [33mPress CTRL+C to quit[0m
+2025-04-20 16:07:51,479 -  * Restarting with stat
+2025-04-20 16:07:54,204 -  * Debugger is active!
+2025-04-20 16:07:54,207 -  * Debugger PIN: 943-887-770
+2025-04-20 16:08:12,309 - 10.10.13.159 - - [20/Apr/2025 16:08:12] "GET / HTTP/1.1" 200 -
+2025-04-20 16:08:12,663 - 10.10.13.159 - - [20/Apr/2025 16:08:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 16:08:18,449 - User action: extract
+2025-04-20 16:08:25,780 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-20 16:08:25,784 - \U0001f4e5 Prompt:
+Extract the following fields from the resume:
+Name:
+Email:
+Phone:
+LinkedIn:
+Graduation Year:
+University:
+Skills:
+
+Resume Text:
+Address:
+17, Abd Elhady Hassanin , Giza
+Egypt
+
+Ahmed Sakr ad
+
++201551647724
+Email:
+Ahmedsakr2a@gmail.com
+
+Summary
+
+Senior Civil Engineer , with +8 years’ experience as a Technical Office Engineer in
+Housing , Governmental , Hospitals ,and Transmit Projects ,l am experienced in QS, Cost
+Estimation , invoices (both client and sub-contractors), scheduling and planning
+
+Experience
+
+Arab Contractors (Osman Ahmed Osman & Co) 10/2022 to Present
+Planning & Cost Control Engineer
+
+Project: October Rail Transit Monorail
+The Owner: Ministry Of Transport
+Authority Consultant: Hill International
+
+Responsibilities:
+
+e Prepare realistic project schedule using Primavera (P6)
+
+e Maintain Baseline and Updates on Project Schedule
+
+e Maintaining Cost Control on Direct Cost and indirect cost on Project
+
+e Preparing daily work reports , project schedules and recovery programs for
+delayed projects , ensuring adherence to the approved schedule
+
+e Create cash flow forecasts for each project
+
+Arab Contractors (Osman Ahmed Osman & Co) 4/2022 to 10/2022
+Technical Office Engineer
+
+Project: New Administrative Capital Rail Transit Monorail
+The Owner: Ministry Of Transport
+Authority Consultant: Hill International
+
+Responsibilities:
+e Preparing quantity survey for civil and architcture work and any implemented
+e Preparing daily work reports , project schedules and recovery programs for
+delayed projects , ensuring adherence to the approved schedule
+e Prepare invoices (both client and sub-contractors)
+e Prepare Cost Estimation for All Civil and architect Activities
+
+Arab Contractors (Osman Ahmed Osman & Co) 12/2021 to 4/2022
+Technical Office Engineer
+
+Project: The Forensic Medicine Complex at Badr City
+The Owner: Ministry of Justice
+Consultant Office: Sketches
+
+Responsibilities:
+e
+
+Preparing quantity survey for civil and architcture work and any implemented
+activities .
+
+Reviewing and auditing the monthly payment Provided by the main
+
+Receiving and Studying the Contract Documents, and identifying any Conflicts
+that exist.
+
+Arab Contractors (Osman Ahmed Osman & Co) 8/2021 to 12/2021
+Site Engineer
+
+Project: Egypt Mosque - Misr Cultural Islamic center
+
+The Owner: Egyptian Armed Forces Engineering Authority
+Consultant Office: ACE Moharram-Bakhoum
+
+Responsibilities:
+
+e Supervision of Eastern Cultural Islamic Center
+e responsible of finishing
+
+e coordinating between civil working and electromechanical working
+
+Arab Contractors (Osman Ahmed Osman & Co) 2/2021 to 8/2021
+Site Engineer
+
+Project: Egyptian Senator Building - New Administrative Capital - Governmental District
+The Owner: Egyptian Armed Forces Engineering Authority
+Consultant Office: DAR AL-HANDSAH
+Responsibilities:
+e responsible of finishing of 2nd.3rd.4th floors
+
+e coordinating between civil working and electromechanical working
+
+Arab Contractors (Osman Ahmed Osman & Co) 1/2019 to 2/2021
+Site Engineer
+
+Project: Construction of 19 Housing Building in R2 in The New Administrative Capital
+
+The Owner: Egyptian Armed Forces Engineering Authority
+Consultant Office: Amar Misr Counsultant
+
+Responsibilities:
+e responsible of all Concrete Structures and Finishing in the project
+e coordinating between civil working and electromechanical working
+
+Ekarat Company For Investment & Marketing 3/2018 to 1/2019
+Design Engineer
+Project: supervision of Construction in 11 Story Commercial Project in Tanta City
+
+Ekarat Company For Investment & Marketing 5/2015 to 12/2015
+Design Engineer
+Project: 4 months training as a designer . Full design of many commercial projects (
+Footings ,Raft , piles , columns , beams and slabs ) full 3D Model using Sap , Etabs , Csi
+Column , safe and Autocad
+
+Skills
+
+AutoCad — Sap — Etabs — Safe — CS! Coulmn — Microsoft Office — Primavera (P6)
+
+CERTIFICATES
+
+e Cost control Workshop (CCW)
+
+Successfully participate and complete cost control Workshop
+(12/2023 - 1/2024)
+
+e International British Academy Certificate for Structural Design
+successfully Completed Structural Design Course By Using: sap , Etabs , Safe ,
+AutoCad
+(6\2015 _8\2015)
+
+e Northern Military Zone Language Institute
+successfully completed 11/upper intermediate of the american course
+(7\2018-8/2018)
+
+EDUCATION
+
+BACHELOR DEGREE IN CIVIL ENGINEERING
+
+Graduation Year: 2016
+
+University: Tanta University
+
+Major: Civil and structrual engineering department , Grade : Good (68,2%)
+Graduation project: soil mechanics and design of foundations ,Grade: Excellent(
+95%)
+
+Languages
+
+Arabic: Mother tongue
+English: Very Good
+
+Personal Information
+
+Military Service: Finished (01/2017 - 03/2018)
+Marital Status: Married
+Driving license issued from Egypt
+2025-04-20 16:08:25,784 - \U0001f4e4 GPT Reply:
+Name: Ahmed Sakr
+Email: Ahmedsakr2a@gmail.com
+Phone: +201551647724
+LinkedIn: Not provided
+Graduation Year: 2016
+University: Tanta University
+Skills: AutoCad, Sap, Etabs, Safe, CSI Column, Microsoft Office, Primavera (P6)
+2025-04-20 16:08:26,130 - 10.10.13.159 - - [20/Apr/2025 16:08:26] "POST / HTTP/1.1" 200 -
+2025-04-20 16:08:44,161 - 10.10.13.159 - - [20/Apr/2025 16:08:44] "GET / HTTP/1.1" 200 -
+2025-04-20 16:09:14,452 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:09:14,700 -  * Restarting with stat
+2025-04-20 16:09:17,484 -  * Debugger is active!
+2025-04-20 16:09:17,487 -  * Debugger PIN: 943-887-770
+2025-04-20 16:09:19,806 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:09:20,047 -  * Restarting with stat
+2025-04-20 16:09:22,903 -  * Debugger is active!
+2025-04-20 16:09:22,906 -  * Debugger PIN: 943-887-770
+2025-04-20 16:09:46,996 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:09:47,257 -  * Restarting with stat
+2025-04-20 16:09:50,170 -  * Debugger is active!
+2025-04-20 16:09:50,173 -  * Debugger PIN: 943-887-770
+2025-04-20 16:10:13,958 - 10.10.13.159 - - [20/Apr/2025 16:10:13] "GET / HTTP/1.1" 200 -
+2025-04-20 16:10:15,892 - 10.10.13.159 - - [20/Apr/2025 16:10:15] "GET / HTTP/1.1" 200 -
+2025-04-20 16:10:18,110 - 10.10.13.159 - - [20/Apr/2025 16:10:18] "GET / HTTP/1.1" 200 -
+2025-04-20 16:10:20,353 - 10.10.13.159 - - [20/Apr/2025 16:10:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 16:10:35,704 - 10.10.13.159 - - [20/Apr/2025 16:10:35] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:10:45,847 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-20 16:10:45,847 - [33mPress CTRL+C to quit[0m
+2025-04-20 16:10:45,849 -  * Restarting with stat
+2025-04-20 16:10:48,619 -  * Debugger is active!
+2025-04-20 16:10:48,622 -  * Debugger PIN: 943-887-770
+2025-04-20 16:10:59,686 - 10.10.13.159 - - [20/Apr/2025 16:10:59] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:11:26,906 -  * Detected change in 'c:\\ats\\03.api_service.py', reloading
+2025-04-20 16:11:27,128 -  * Restarting with stat
+2025-04-20 16:11:29,894 -  * Debugger is active!
+2025-04-20 16:11:29,897 -  * Debugger PIN: 943-887-770
+2025-04-20 16:11:50,765 -  * Detected change in 'c:\\ats\\03.api_service.py', reloading
+2025-04-20 16:11:50,981 -  * Restarting with stat
+2025-04-20 16:11:53,808 -  * Debugger is active!
+2025-04-20 16:11:53,814 -  * Debugger PIN: 943-887-770
+2025-04-20 16:12:12,217 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-20 16:12:12,217 - [33mPress CTRL+C to quit[0m
+2025-04-20 16:12:12,219 -  * Restarting with stat
+2025-04-20 16:12:14,997 -  * Debugger is active!
+2025-04-20 16:12:15,000 -  * Debugger PIN: 943-887-770
+2025-04-20 16:12:29,829 - 10.10.13.159 - - [20/Apr/2025 16:12:29] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+2025-04-20 16:12:29,931 - 10.10.13.159 - - [20/Apr/2025 16:12:29] "GET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-20 16:12:29,943 - 10.10.13.159 - - [20/Apr/2025 16:12:29] "GET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-20 16:12:30,090 - 10.10.13.159 - - [20/Apr/2025 16:12:30] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 16:12:39,507 - 10.10.13.159 - - [20/Apr/2025 16:12:39] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+2025-04-20 16:12:39,567 - 10.10.13.159 - - [20/Apr/2025 16:12:39] "[36mGET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-20 16:12:39,572 - 10.10.13.159 - - [20/Apr/2025 16:12:39] "[36mGET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-20 16:13:36,840 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:13:37,057 -  * Restarting with stat
+2025-04-20 16:13:39,852 -  * Debugger is active!
+2025-04-20 16:13:39,855 -  * Debugger PIN: 943-887-770
+2025-04-20 16:13:43,289 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:13:43,498 -  * Restarting with stat
+2025-04-20 16:13:46,313 -  * Debugger is active!
+2025-04-20 16:13:46,316 -  * Debugger PIN: 943-887-770
+2025-04-20 16:14:27,865 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:14:28,104 -  * Restarting with stat
+2025-04-20 16:14:30,884 -  * Debugger is active!
+2025-04-20 16:14:30,886 -  * Debugger PIN: 943-887-770
+2025-04-20 16:14:34,324 -  * Detected change in 'C:\\ats\\app.py', reloading
+2025-04-20 16:14:34,541 -  * Restarting with stat
+2025-04-20 16:14:37,363 -  * Debugger is active!
+2025-04-20 16:14:37,365 -  * Debugger PIN: 943-887-770
+2025-04-20 16:15:04,185 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-20 16:15:04,185 - [33mPress CTRL+C to quit[0m
+2025-04-20 16:15:04,188 -  * Restarting with stat
+2025-04-20 16:15:06,907 -  * Debugger is active!
+2025-04-20 16:15:06,910 -  * Debugger PIN: 943-887-770
+2025-04-20 16:15:24,737 - 10.10.13.159 - - [20/Apr/2025 16:15:24] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:15:39,848 - 10.10.13.159 - - [20/Apr/2025 16:15:39] "GET /search?keywords=&department=Design+Department&job_title= HTTP/1.1" 200 -
+2025-04-20 16:15:44,994 - 10.10.13.159 - - [20/Apr/2025 16:15:44] "GET /cv/188 HTTP/1.1" 200 -
+2025-04-20 16:15:57,093 - 10.10.13.159 - - [20/Apr/2025 16:15:57] "GET /cv/file/2025-01-05_Mohamed%20Talaat%20Nassr%20Hassan%20%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-20 16:27:25,111 - 10.10.13.159 - - [20/Apr/2025 16:27:25] "GET / HTTP/1.1" 200 -
+2025-04-20 16:27:25,764 - 10.10.13.159 - - [20/Apr/2025 16:27:25] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:34:09,376 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-20 16:34:09,377 - [33mPress CTRL+C to quit[0m
+2025-04-20 16:34:09,378 -  * Restarting with stat
+2025-04-20 16:34:12,080 -  * Debugger is active!
+2025-04-20 16:34:12,083 -  * Debugger PIN: 943-887-770
+2025-04-20 16:34:55,399 - 10.10.13.159 - - [20/Apr/2025 16:34:55] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:35:15,627 - 10.10.13.159 - - [20/Apr/2025 16:35:15] "GET /search?keywords=autocad&department=&job_title= HTTP/1.1" 200 -
+2025-04-20 16:35:33,830 - 10.10.13.159 - - [20/Apr/2025 16:35:33] "GET /search?keywords=power+bi&department=&job_title= HTTP/1.1" 200 -
+2025-04-20 16:35:39,018 - 10.10.13.159 - - [20/Apr/2025 16:35:39] "GET /cv/3 HTTP/1.1" 200 -
+2025-04-20 16:37:02,016 - 10.10.13.159 - - [20/Apr/2025 16:37:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 16:37:16,040 - 10.10.13.159 - - [20/Apr/2025 16:37:16] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:57:39,574 - 10.10.13.201 - - [20/Apr/2025 16:57:39] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:57:41,138 - 10.10.13.201 - - [20/Apr/2025 16:57:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 16:58:18,550 - 10.10.13.201 - - [20/Apr/2025 16:58:18] "GET /search HTTP/1.1" 200 -
+2025-04-20 16:59:11,541 - 10.10.13.201 - - [20/Apr/2025 16:59:11] "GET /cv/4 HTTP/1.1" 200 -
+2025-04-20 17:00:53,655 - 10.10.13.201 - - [20/Apr/2025 17:00:53] "GET /cv/4 HTTP/1.1" 200 -
+2025-04-20 22:45:40,355 - 10.212.134.200 - - [20/Apr/2025 22:45:40] "GET /search HTTP/1.1" 200 -
+2025-04-20 22:45:57,406 - 10.212.134.200 - - [20/Apr/2025 22:45:57] "GET /cv/10 HTTP/1.1" 200 -
+2025-04-20 22:46:06,838 - 10.212.134.200 - - [20/Apr/2025 22:46:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 22:48:11,049 - 10.212.134.200 - - [20/Apr/2025 22:48:11] "GET /search HTTP/1.1" 200 -
+2025-04-20 22:48:44,846 - 10.212.134.200 - - [20/Apr/2025 22:48:44] "GET /search?keywords=MCSE&department=&job_title= HTTP/1.1" 200 -
+2025-04-20 22:48:56,464 - 10.212.134.200 - - [20/Apr/2025 22:48:56] "GET /cv/305 HTTP/1.1" 200 -
+2025-04-20 22:49:24,930 - 10.212.134.200 - - [20/Apr/2025 22:49:24] "GET /cv/file/2025-01-08_Mohamed%20Shaher%20Zedan%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-21 08:37:17,839 - 10.212.134.200 - - [21/Apr/2025 08:37:17] "GET / HTTP/1.1" 200 -
+2025-04-21 08:37:17,956 - 10.212.134.200 - - [21/Apr/2025 08:37:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-21 08:37:43,194 - 10.212.134.200 - - [21/Apr/2025 08:37:43] "GET /search HTTP/1.1" 200 -
+2025-04-21 08:38:04,110 - 10.212.134.200 - - [21/Apr/2025 08:38:04] "GET /search?keywords=&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-21 08:38:32,275 - 10.212.134.200 - - [21/Apr/2025 08:38:32] "GET /cv/3747 HTTP/1.1" 200 -
+2025-04-21 08:38:57,970 - 10.212.134.200 - - [21/Apr/2025 08:38:57] "GET /cv/file/2025-04-14_mohamed%20sherif%20elawady%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-21 08:39:46,909 - 10.212.134.200 - - [21/Apr/2025 08:39:46] "GET /search HTTP/1.1" 200 -
+2025-04-21 08:40:22,128 - 10.212.134.200 - - [21/Apr/2025 08:40:22] "GET /search?keywords=&department=Contracts+Department&job_title= HTTP/1.1" 200 -
+2025-04-21 08:40:31,250 - 10.212.134.200 - - [21/Apr/2025 08:40:31] "GET /cv/33 HTTP/1.1" 200 -
+2025-04-21 21:59:44,640 - 10.212.134.200 - - [21/Apr/2025 21:59:44] "GET /search HTTP/1.1" 200 -
+2025-04-21 22:01:20,431 - 10.212.134.200 - - [21/Apr/2025 22:01:20] "GET /search?keywords=&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-21 22:01:27,940 - 10.212.134.200 - - [21/Apr/2025 22:01:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-21 22:01:28,925 - 10.212.134.200 - - [21/Apr/2025 22:01:28] "GET /search HTTP/1.1" 200 -
+2025-04-21 22:01:44,468 - 10.212.134.200 - - [21/Apr/2025 22:01:44] "GET /cv/2713 HTTP/1.1" 200 -
+2025-04-21 22:02:22,466 - 10.212.134.200 - - [21/Apr/2025 22:02:22] "GET /cv/4 HTTP/1.1" 200 -
+2025-04-21 22:02:22,574 - 10.212.134.200 - - [21/Apr/2025 22:02:22] "GET /cv/2095 HTTP/1.1" 200 -
+2025-04-21 22:02:50,736 - 10.212.134.200 - - [21/Apr/2025 22:02:50] "GET /cv/file/2025-02-10_Omar%20Nouh%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-21 22:03:34,309 - 10.212.134.200 - - [21/Apr/2025 22:03:34] "GET /search?keywords=dina&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-21 22:04:05,740 - 10.212.134.200 - - [21/Apr/2025 22:04:05] "GET / HTTP/1.1" 200 -
+2025-04-21 22:04:15,699 - User action: extract
+2025-04-21 22:04:21,804 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 22:04:21,822 - \U0001f4e5 Prompt:
+Extract the following fields from the resume:
+Name:
+Email:
+Phone:
+LinkedIn:
+Graduation Year:
+University:
+Skills:
+
+Resume Text:
+Dina Gamal
+
+Nationality: Egyptian | Date of Birth: 1996
+Email: dinagamal1796@gmail.com | Phone: +201287808617
+Address: El-Mandara, Alexandria, Egypt
+
+Professional Summary
+Certified Therapeutic Nutritionist with expertise in clinical nutrition. Proficient in quality
+control, food safety, and medical analysis. Demonstrates exceptional problem-solving
+abilities, teamwork, and effective communication. Seeking a dynamic role to contribute to
+healthcare and nutrition advancements. Aiming to apply my expertise in clinical nutrition to
+improve patient health outcomes.
+
+Education
+Diploma in Therapeutic Nutrition
+Faculty of Science, Damanhour University (2022)
+Grade: Very Good
+*Focused on clinical nutrition practices and therapeutic dietary plans.*
+
+B.Sc. in Agriculture (Animal Nutrition)
+Faculty of Agriculture, Alexandria University (2018)
+Grade: Very Good
+
+Professional Experience
+Nutritionist
+Al Quds Medical Center (2024)
+- Designed and implemented personalized nutrition plans for patients.
+- Provided dietary consultations and monitored patient progress.
+- Follow-up of cases online.
+
+Medical Analyst
+
+Hassab Labs (2022 - 2023)
+
+- Reviewed medical reports and ensured data accuracy.
+- Collected samples
+
+Quality Control & Inspection Engineer
+
+Podco Australia Agricultural Production Company (2021 - 2022)
+
+- Conducted microbial, chemical, and physical analyses of food products.
+
+- Developed product specifications and ensured compliance with quality standards.
+
+Quality Control Engineer
+El Roda Agriculture and Exports Company (2020 - 2021)
+- Oversaw agricultural product inspection and export quality assurance.
+
+Veterinary Assistant
+
+Dr. Green Hospital & Khaled Ibn Al-Walid Clinic (2018 - 2020)
+
+- Assisted in animal medical care and performed basic procedures.
+- Provided nutritional advice for animal health improvement.
+
+Certifications & Training
+- Medical Analysis Certificate
+‘Mabaret Al-Asafra Hospital’
+*Trained in reading medical reports, sampling, and injections*
+
+- Practical Training in Animal Farms
+*Gained experience in animal nutrition, medical care, and birthing*
+
+- Diploma in Food Safety and Health *(Ongoing)*
+- Attended specialized training seminars on animal nutrition during university studies.
+
+Skills
+**Technical Skills:**
+- Proficient in Microsoft Office Suite (Excel, Word, PowerPoint, Outlook).
+- Experienced in medical and laboratory analysis.
+
+**Soft Skills:**
+
+- Strong communication and teamwork abilities.
+
+- Advanced problem-solving and decision-making skills.
+
+- Effective under pressure with excellent presentation skills.
+
+Languages
+Arabic & English
+
+Additional Information
+
+Nominated as a university staff member at Matruh University in 2018 but declined for
+personal reasons.
+2025-04-21 22:04:21,822 - \U0001f4e4 GPT Reply:
+Name: Dina Gamal
+Email: dinagamal1796@gmail.com
+Phone: +201287808617
+LinkedIn: N/A
+Graduation Year: 2022
+University: Faculty of Science, Damanhour University
+Skills:
+- Clinical nutrition
+- Quality control
+- Food safety
+- Medical analysis
+- Communication
+- Teamwork
+- Problem-solving
+- Microsoft Office Suite
+- Laboratory analysis
+2025-04-21 22:04:22,127 - 10.212.134.200 - - [21/Apr/2025 22:04:22] "POST / HTTP/1.1" 200 -
+2025-04-21 22:04:43,288 - User action: summarize
+2025-04-21 22:04:47,982 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 22:04:47,986 - \U0001f4e5 Prompt:
+Summarize the following resume in 1-2 professional lines:
+
+Dina Gamal
+
+Nationality: Egyptian | Date of Birth: 1996
+Email: dinagamal1796@gmail.com | Phone: +201287808617
+Address: El-Mandara, Alexandria, Egypt
+
+Professional Summary
+Certified Therapeutic Nutritionist with expertise in clinical nutrition. Proficient in quality
+control, food safety, and medical analysis. Demonstrates exceptional problem-solving
+abilities, teamwork, and effective communication. Seeking a dynamic role to contribute to
+healthcare and nutrition advancements. Aiming to apply my expertise in clinical nutrition to
+improve patient health outcomes.
+
+Education
+Diploma in Therapeutic Nutrition
+Faculty of Science, Damanhour University (2022)
+Grade: Very Good
+*Focused on clinical nutrition practices and therapeutic dietary plans.*
+
+B.Sc. in Agriculture (Animal Nutrition)
+Faculty of Agriculture, Alexandria University (2018)
+Grade: Very Good
+
+Professional Experience
+Nutritionist
+Al Quds Medical Center (2024)
+- Designed and implemented personalized nutrition plans for patients.
+- Provided dietary consultations and monitored patient progress.
+- Follow-up of cases online.
+
+Medical Analyst
+
+Hassab Labs (2022 - 2023)
+
+- Reviewed medical reports and ensured data accuracy.
+- Collected samples
+
+Quality Control & Inspection Engineer
+
+Podco Australia Agricultural Production Company (2021 - 2022)
+
+- Conducted microbial, chemical, and physical analyses of food products.
+
+- Developed product specifications and ensured compliance with quality standards.
+
+Quality Control Engineer
+El Roda Agriculture and Exports Company (2020 - 2021)
+- Oversaw agricultural product inspection and export quality assurance.
+
+Veterinary Assistant
+
+Dr. Green Hospital & Khaled Ibn Al-Walid Clinic (2018 - 2020)
+
+- Assisted in animal medical care and performed basic procedures.
+- Provided nutritional advice for animal health improvement.
+
+Certifications & Training
+- Medical Analysis Certificate
+‘Mabaret Al-Asafra Hospital’
+*Trained in reading medical reports, sampling, and injections*
+
+- Practical Training in Animal Farms
+*Gained experience in animal nutrition, medical care, and birthing*
+
+- Diploma in Food Safety and Health *(Ongoing)*
+- Attended specialized training seminars on animal nutrition during university studies.
+
+Skills
+**Technical Skills:**
+- Proficient in Microsoft Office Suite (Excel, Word, PowerPoint, Outlook).
+- Experienced in medical and laboratory analysis.
+
+**Soft Skills:**
+
+- Strong communication and teamwork abilities.
+
+- Advanced problem-solving and decision-making skills.
+
+- Effective under pressure with excellent presentation skills.
+
+Languages
+Arabic & English
+
+Additional Information
+
+Nominated as a university staff member at Matruh University in 2018 but declined for
+personal reasons.
+2025-04-21 22:04:47,986 - \U0001f4e4 GPT Reply:
+Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality control, and medical analysis. Strong problem-solving, communication, and teamwork skills. Seeking a role to contribute to healthcare advancements and improve patient health outcomes.
+2025-04-21 22:04:48,008 - 10.212.134.200 - - [21/Apr/2025 22:04:48] "POST / HTTP/1.1" 200 -
+2025-04-22 09:17:22,982 - 10.10.13.111 - - [22/Apr/2025 09:17:22] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:17:25,134 - 10.10.13.111 - - [22/Apr/2025 09:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 09:17:39,231 - 10.10.13.111 - - [22/Apr/2025 09:17:39] "GET /search?keywords=&department=HR+Department&job_title= HTTP/1.1" 200 -
+2025-04-22 09:17:49,623 - 10.10.13.111 - - [22/Apr/2025 09:17:49] "GET /cv/2283 HTTP/1.1" 200 -
+2025-04-22 09:18:14,034 - 10.10.13.111 - - [22/Apr/2025 09:18:14] "GET /cv/file/2025-01-28_\u0623\u062d\u0645\u062f%20\u0623\u0634\u0631\u0641%20\u0637\u0644\u0628\u0647%20\u0633\u062a\u064a\u062a\u0647%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-22 09:18:35,789 - 10.10.13.111 - - [22/Apr/2025 09:18:35] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:19:34,495 - 10.10.13.111 - - [22/Apr/2025 09:19:34] "GET /search?keywords=&department=&job_title=Market+Research+Analyst HTTP/1.1" 200 -
+2025-04-22 09:20:08,113 - 10.10.13.111 - - [22/Apr/2025 09:20:08] "GET /search?keywords=photoshop&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 09:20:10,779 - 10.10.12.201 - - [22/Apr/2025 09:20:10] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:20:12,494 - 10.10.12.201 - - [22/Apr/2025 09:20:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 09:20:13,992 - 10.10.13.111 - - [22/Apr/2025 09:20:13] "GET /cv/20 HTTP/1.1" 200 -
+2025-04-22 09:20:29,505 - 10.10.13.111 - - [22/Apr/2025 09:20:29] "GET / HTTP/1.1" 200 -
+2025-04-22 09:20:35,194 - 10.10.13.111 - - [22/Apr/2025 09:20:35] "GET / HTTP/1.1" 200 -
+2025-04-22 09:20:37,926 - 10.10.12.201 - - [22/Apr/2025 09:20:37] "GET /search?keywords=&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-22 09:20:44,111 - 10.10.13.111 - - [22/Apr/2025 09:20:44] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:20:57,655 - 10.10.13.111 - - [22/Apr/2025 09:20:57] "GET /search?keywords=&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-22 09:21:16,893 - 10.10.13.111 - - [22/Apr/2025 09:21:16] "GET /search?keywords=&department=Other+(specify)&job_title= HTTP/1.1" 200 -
+2025-04-22 09:21:29,264 - 10.10.13.111 - - [22/Apr/2025 09:21:29] "GET /search?keywords=&department=Other+(specify)&job_title=Architect HTTP/1.1" 200 -
+2025-04-22 09:21:39,674 - 10.10.13.111 - - [22/Apr/2025 09:21:39] "GET /search?keywords=&department=Other+(specify)&job_title=Bim+Structure+Technical+office+engineer HTTP/1.1" 200 -
+2025-04-22 09:21:43,762 - 10.10.13.111 - - [22/Apr/2025 09:21:43] "GET / HTTP/1.1" 200 -
+2025-04-22 09:21:58,913 - 10.10.13.111 - - [22/Apr/2025 09:21:58] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:22:03,046 - 10.10.13.111 - - [22/Apr/2025 09:22:03] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-22 09:22:04,953 - 10.10.13.111 - - [22/Apr/2025 09:22:04] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-22 09:22:33,201 - 10.10.13.111 - - [22/Apr/2025 09:22:33] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:23:57,356 - 10.10.13.111 - - [22/Apr/2025 09:23:57] "GET /search?keywords=photoshop&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 09:24:07,878 - 10.10.13.111 - - [22/Apr/2025 09:24:07] "GET /cv/167 HTTP/1.1" 200 -
+2025-04-22 09:24:11,544 - 10.10.13.111 - - [22/Apr/2025 09:24:11] "GET /cv/file/2025-01-05_Ahmed%20Eid%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-22 09:25:40,642 - 10.10.13.111 - - [22/Apr/2025 09:25:40] "[33mGET /cv/linkedin.com/in/ahmed-eid-924037218 HTTP/1.1[0m" 404 -
+2025-04-22 09:25:54,535 - 10.10.13.111 - - [22/Apr/2025 09:25:54] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:26:03,165 - 10.10.13.111 - - [22/Apr/2025 09:26:03] "GET /cv/10 HTTP/1.1" 200 -
+2025-04-22 09:26:26,634 - 10.10.13.111 - - [22/Apr/2025 09:26:26] "GET / HTTP/1.1" 200 -
+2025-04-22 09:26:36,722 - 10.10.13.111 - - [22/Apr/2025 09:26:36] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:27:39,029 - 10.10.13.111 - - [22/Apr/2025 09:27:39] "GET /search?keywords=&department=Construction+Department&job_title= HTTP/1.1" 200 -
+2025-04-22 09:28:28,936 - 10.10.12.201 - - [22/Apr/2025 09:28:28] "GET /search?keywords=autocad,+Power+Bi&department=IT+Department&job_title= HTTP/1.1" 200 -
+2025-04-22 09:28:37,139 - 10.10.12.201 - - [22/Apr/2025 09:28:37] "GET /cv/3634 HTTP/1.1" 200 -
+2025-04-22 09:28:53,896 - 10.10.12.201 - - [22/Apr/2025 09:28:53] "GET /cv/2856 HTTP/1.1" 200 -
+2025-04-22 09:29:15,190 - 10.10.12.201 - - [22/Apr/2025 09:29:15] "GET / HTTP/1.1" 200 -
+2025-04-22 09:29:32,423 - 10.10.12.201 - - [22/Apr/2025 09:29:32] "GET /search HTTP/1.1" 200 -
+2025-04-22 09:30:03,720 - 10.10.12.201 - - [22/Apr/2025 09:30:03] "GET /search?keywords=&department=&job_title=IT+Specialist HTTP/1.1" 200 -
+2025-04-22 09:30:42,577 - 10.10.12.201 - - [22/Apr/2025 09:30:42] "GET /search?keywords=power+bi,+revit&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 09:30:52,553 - 10.10.12.201 - - [22/Apr/2025 09:30:52] "GET /cv/186 HTTP/1.1" 200 -
+2025-04-22 10:11:53,381 - 10.10.13.111 - - [22/Apr/2025 10:11:53] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:11:55,735 - 10.10.13.111 - - [22/Apr/2025 10:11:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 10:12:08,431 - 10.10.13.111 - - [22/Apr/2025 10:12:08] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:12:24,178 - 10.10.13.111 - - [22/Apr/2025 10:12:24] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:14:11,437 - 10.10.13.111 - - [22/Apr/2025 10:14:11] "GET /cv/20 HTTP/1.1" 200 -
+2025-04-22 10:14:16,188 - 10.10.13.111 - - [22/Apr/2025 10:14:16] "[33mGET /api/job_titles HTTP/1.1[0m" 404 -
+2025-04-22 10:14:24,295 - 10.10.13.111 - - [22/Apr/2025 10:14:24] "[33mGET /api/job%20titles HTTP/1.1[0m" 404 -
+2025-04-22 10:14:29,237 - 10.10.13.111 - - [22/Apr/2025 10:14:29] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2025-04-22 10:14:34,191 - 10.10.13.111 - - [22/Apr/2025 10:14:34] "GET / HTTP/1.1" 200 -
+2025-04-22 10:14:45,840 - 10.10.13.111 - - [22/Apr/2025 10:14:45] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:14:53,694 - 10.10.13.111 - - [22/Apr/2025 10:14:53] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-22 10:17:33,273 - 10.10.11.241 - - [22/Apr/2025 10:17:33] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:17:35,125 - 10.10.11.241 - - [22/Apr/2025 10:17:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 10:17:50,071 - 10.10.11.241 - - [22/Apr/2025 10:17:50] "GET /search?keywords=&department=&job_title=BIM+Engineer HTTP/1.1" 200 -
+2025-04-22 10:17:55,244 - 10.10.11.241 - - [22/Apr/2025 10:17:55] "GET /cv/128 HTTP/1.1" 200 -
+2025-04-22 10:18:01,842 - 10.10.11.241 - - [22/Apr/2025 10:18:01] "GET /cv/file/2025-01-04_Mohamed%20Raafat%20shebl%20mohamed%20%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-22 10:18:06,541 - 10.10.13.111 - - [22/Apr/2025 10:18:06] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-22 10:18:44,022 - 10.10.13.111 - - [22/Apr/2025 10:18:44] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:18:53,005 - 10.10.11.241 - - [22/Apr/2025 10:18:53] "GET /search?keywords=sama&department=&job_title=BIM+Engineer HTTP/1.1" 200 -
+2025-04-22 10:22:26,860 - 10.10.13.111 - - [22/Apr/2025 10:22:26] "GET /cv/5 HTTP/1.1" 200 -
+2025-04-22 10:22:51,098 - 10.10.13.111 - - [22/Apr/2025 10:22:51] "GET /search HTTP/1.1" 200 -
+2025-04-22 10:23:55,109 - 10.10.13.111 - - [22/Apr/2025 10:23:55] "GET /search?keywords=primavera,+cat&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 10:23:59,878 - 10.10.13.111 - - [22/Apr/2025 10:23:59] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-22 10:24:21,691 - 10.10.13.111 - - [22/Apr/2025 10:24:21] "GET /search?keywords=primavera,cat&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 11:47:05,109 - 10.10.13.111 - - [22/Apr/2025 11:47:05] "[33mGET /api/search HTTP/1.1[0m" 404 -
+2025-04-22 11:49:44,746 - 10.10.13.111 - - [22/Apr/2025 11:49:44] "[33mGET /api/search HTTP/1.1[0m" 404 -
+2025-04-22 11:50:01,052 - 10.10.13.111 - - [22/Apr/2025 11:50:01] "[33mGET /api/search HTTP/1.1[0m" 404 -
+2025-04-22 11:50:19,089 - 10.10.13.111 - - [22/Apr/2025 11:50:19] "[33mGET /api/search HTTP/1.1[0m" 404 -
+2025-04-22 11:56:35,716 - 10.10.13.111 - - [22/Apr/2025 11:56:35] "[33mGET /api/search?page=1&pageSize=10 HTTP/1.1[0m" 404 -
+2025-04-22 11:56:45,865 - 10.10.13.111 - - [22/Apr/2025 11:56:45] "[33mGET /api/search?page=1&pageSize=10 HTTP/1.1[0m" 404 -
+2025-04-22 13:14:27,614 - 10.10.12.201 - - [22/Apr/2025 13:14:27] "GET /search HTTP/1.1" 200 -
+2025-04-22 13:14:28,940 - 10.10.12.201 - - [22/Apr/2025 13:14:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 13:15:21,226 - 10.10.12.201 - - [22/Apr/2025 13:15:21] "GET /search?keywords=rivit&department=&job_title= HTTP/1.1" 200 -
+2025-04-22 13:15:28,346 - 10.10.12.201 - - [22/Apr/2025 13:15:28] "GET /cv/3738 HTTP/1.1" 200 -
+2025-04-22 13:15:44,041 - 10.10.12.201 - - [22/Apr/2025 13:15:44] "GET / HTTP/1.1" 200 -
+2025-04-22 13:15:47,881 - 10.10.12.201 - - [22/Apr/2025 13:15:47] "GET /search HTTP/1.1" 200 -
+2025-04-22 13:15:52,581 - User action: read
+2025-04-22 13:16:00,161 - 10.10.12.201 - - [22/Apr/2025 13:16:00] "POST / HTTP/1.1" 200 -
+2025-04-22 13:22:41,068 -  * Detected change in 'C:\\ats\\03.api_service.py', reloading
+2025-04-22 13:22:41,335 -  * Restarting with stat
+2025-04-22 13:22:47,718 -  * Debugger is active!
+2025-04-22 13:22:47,722 -  * Debugger PIN: 943-887-770
+2025-04-22 15:47:19,099 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-22 15:47:19,099 - [33mPress CTRL+C to quit[0m
+2025-04-22 15:47:19,101 -  * Restarting with stat
+2025-04-22 15:47:21,804 -  * Debugger is active!
+2025-04-22 15:47:21,807 -  * Debugger PIN: 943-887-770
+2025-04-22 16:53:15,952 - 10.10.13.111 - - [22/Apr/2025 16:53:15] "GET /search?keywords=primavera,cat&department=&job_title= HTTP/1.1" 200 -
+2025-04-23 11:16:19,132 - 10.10.13.111 - - [23/Apr/2025 11:16:19] "GET / HTTP/1.1" 200 -
+2025-04-23 11:16:19,236 - 10.10.13.111 - - [23/Apr/2025 11:16:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-23 11:16:20,506 - 10.10.13.111 - - [23/Apr/2025 11:16:20] "GET /search HTTP/1.1" 200 -
+2025-04-23 11:16:30,764 - 10.10.13.111 - - [23/Apr/2025 11:16:30] "GET /search HTTP/1.1" 200 -
+2025-04-23 11:16:35,179 - 10.10.13.111 - - [23/Apr/2025 11:16:35] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-23 11:16:36,348 - 10.10.13.111 - - [23/Apr/2025 11:16:36] "GET /cv/2234 HTTP/1.1" 200 -
+2025-04-23 13:34:30,326 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:34:30,561 -  * Restarting with stat
+2025-04-23 13:34:35,991 -  * Debugger is active!
+2025-04-23 13:34:35,995 -  * Debugger PIN: 943-887-770
+2025-04-23 13:36:33,600 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:36:33,791 -  * Restarting with stat
+2025-04-23 13:36:36,521 -  * Debugger is active!
+2025-04-23 13:36:36,524 -  * Debugger PIN: 943-887-770
+2025-04-23 13:37:35,435 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:37:35,624 -  * Restarting with stat
+2025-04-23 13:37:38,343 -  * Debugger is active!
+2025-04-23 13:37:38,346 -  * Debugger PIN: 943-887-770
+2025-04-23 13:38:15,512 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:38:15,734 -  * Restarting with stat
+2025-04-23 13:38:18,535 -  * Debugger is active!
+2025-04-23 13:38:18,538 -  * Debugger PIN: 943-887-770
+2025-04-23 13:40:11,028 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:40:11,234 -  * Restarting with stat
+2025-04-23 13:40:14,079 -  * Debugger is active!
+2025-04-23 13:40:14,082 -  * Debugger PIN: 943-887-770
+2025-04-23 13:43:01,028 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:43:01,242 -  * Restarting with stat
+2025-04-23 13:43:04,059 -  * Debugger is active!
+2025-04-23 13:43:04,062 -  * Debugger PIN: 943-887-770
+2025-04-23 13:43:44,513 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:43:44,687 -  * Restarting with stat
+2025-04-23 13:43:47,491 -  * Debugger is active!
+2025-04-23 13:43:47,495 -  * Debugger PIN: 943-887-770
+2025-04-23 13:45:42,894 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:45:43,079 -  * Restarting with stat
+2025-04-23 13:45:45,912 -  * Debugger is active!
+2025-04-23 13:45:45,916 -  * Debugger PIN: 943-887-770
+2025-04-23 13:46:13,293 -  * Detected change in 'C:\\ats\\fix.jobs.departments.py', reloading
+2025-04-23 13:46:13,469 -  * Restarting with stat
+2025-04-23 13:46:16,191 -  * Debugger is active!
+2025-04-23 13:46:16,195 -  * Debugger PIN: 943-887-770
+2025-04-23 14:40:36,340 -  * Detected change in 'C:\\ats\\get_unmatched_records.py', reloading
+2025-04-23 14:40:36,536 -  * Restarting with stat
+2025-04-23 14:40:39,444 -  * Debugger is active!
+2025-04-23 14:40:39,447 -  * Debugger PIN: 943-887-770
+2025-04-23 14:41:29,671 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:41:29,859 -  * Restarting with stat
+2025-04-23 14:41:32,570 -  * Debugger is active!
+2025-04-23 14:41:32,574 -  * Debugger PIN: 943-887-770
+2025-04-23 14:42:43,445 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:42:43,643 -  * Restarting with stat
+2025-04-23 14:42:46,415 -  * Debugger is active!
+2025-04-23 14:42:46,418 -  * Debugger PIN: 943-887-770
+2025-04-23 14:43:14,886 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:43:15,092 -  * Restarting with stat
+2025-04-23 14:43:17,855 -  * Debugger is active!
+2025-04-23 14:43:17,859 -  * Debugger PIN: 943-887-770
+2025-04-23 14:43:37,630 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:43:37,816 -  * Restarting with stat
+2025-04-23 14:43:40,539 -  * Debugger is active!
+2025-04-23 14:43:40,542 -  * Debugger PIN: 943-887-770
+2025-04-23 14:44:25,294 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:44:25,505 -  * Restarting with stat
+2025-04-23 14:44:28,215 -  * Debugger is active!
+2025-04-23 14:44:28,218 -  * Debugger PIN: 943-887-770
+2025-04-23 14:46:11,619 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:46:11,799 -  * Restarting with stat
+2025-04-23 14:46:14,540 -  * Debugger is active!
+2025-04-23 14:46:14,544 -  * Debugger PIN: 943-887-770
+2025-04-23 14:47:06,895 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:47:07,067 -  * Restarting with stat
+2025-04-23 14:47:09,804 -  * Debugger is active!
+2025-04-23 14:47:09,807 -  * Debugger PIN: 943-887-770
+2025-04-23 14:53:29,838 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:53:30,021 -  * Restarting with stat
+2025-04-23 14:53:32,814 -  * Debugger is active!
+2025-04-23 14:53:32,818 -  * Debugger PIN: 943-887-770
+2025-04-23 14:55:32,714 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 14:55:32,897 -  * Restarting with stat
+2025-04-23 14:55:35,673 -  * Debugger is active!
+2025-04-23 14:55:35,677 -  * Debugger PIN: 943-887-770
+2025-04-23 14:57:52,968 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 14:57:53,161 -  * Restarting with stat
+2025-04-23 14:57:55,909 -  * Debugger is active!
+2025-04-23 14:57:55,912 -  * Debugger PIN: 943-887-770
+2025-04-23 14:59:45,859 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 14:59:46,041 -  * Restarting with stat
+2025-04-23 14:59:48,842 -  * Debugger is active!
+2025-04-23 14:59:48,845 -  * Debugger PIN: 943-887-770
+2025-04-23 15:00:16,221 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:00:16,419 -  * Restarting with stat
+2025-04-23 15:00:19,177 -  * Debugger is active!
+2025-04-23 15:00:19,181 -  * Debugger PIN: 943-887-770
+2025-04-23 15:05:54,239 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:05:54,473 -  * Restarting with stat
+2025-04-23 15:05:57,542 -  * Debugger is active!
+2025-04-23 15:05:57,546 -  * Debugger PIN: 943-887-770
+2025-04-23 15:06:08,595 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:06:08,788 -  * Restarting with stat
+2025-04-23 15:06:11,556 -  * Debugger is active!
+2025-04-23 15:06:11,559 -  * Debugger PIN: 943-887-770
+2025-04-23 15:07:02,857 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:07:03,050 -  * Restarting with stat
+2025-04-23 15:07:05,886 -  * Debugger is active!
+2025-04-23 15:07:05,889 -  * Debugger PIN: 943-887-770
+2025-04-23 15:07:20,187 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:07:20,384 -  * Restarting with stat
+2025-04-23 15:07:23,081 -  * Debugger is active!
+2025-04-23 15:07:23,084 -  * Debugger PIN: 943-887-770
+2025-04-23 15:08:16,520 -  * Detected change in 'C:\\ats\\add_confidence_column.py', reloading
+2025-04-23 15:08:16,738 -  * Restarting with stat
+2025-04-23 15:08:19,473 -  * Debugger is active!
+2025-04-23 15:08:19,477 -  * Debugger PIN: 943-887-770
+2025-04-23 15:09:39,002 -  * Detected change in 'C:\\ats\\add_confidence_column.py', reloading
+2025-04-23 15:09:39,191 -  * Restarting with stat
+2025-04-23 15:09:41,915 -  * Debugger is active!
+2025-04-23 15:09:41,918 -  * Debugger PIN: 943-887-770
+2025-04-23 15:12:14,230 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:12:14,416 -  * Restarting with stat
+2025-04-23 15:12:17,169 -  * Debugger is active!
+2025-04-23 15:12:17,172 -  * Debugger PIN: 943-887-770
+2025-04-23 15:12:21,707 -  * Detected change in 'C:\\ats\\test_fix_10_records.py', reloading
+2025-04-23 15:12:21,914 -  * Restarting with stat
+2025-04-23 15:12:24,650 -  * Debugger is active!
+2025-04-23 15:12:24,653 -  * Debugger PIN: 943-887-770
+2025-04-23 15:16:58,687 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:16:58,877 -  * Restarting with stat
+2025-04-23 15:17:01,601 -  * Debugger is active!
+2025-04-23 15:17:01,605 -  * Debugger PIN: 943-887-770
+2025-04-23 15:21:10,543 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:21:10,738 -  * Restarting with stat
+2025-04-23 15:21:13,507 -  * Debugger is active!
+2025-04-23 15:21:13,510 -  * Debugger PIN: 943-887-770
+2025-04-23 15:22:35,292 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:22:35,478 -  * Restarting with stat
+2025-04-23 15:22:38,263 -  * Debugger is active!
+2025-04-23 15:22:38,267 -  * Debugger PIN: 943-887-770
+2025-04-23 15:26:00,667 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:26:00,847 -  * Restarting with stat
+2025-04-23 15:26:03,612 -  * Debugger is active!
+2025-04-23 15:26:03,615 -  * Debugger PIN: 943-887-770
+2025-04-23 15:26:42,925 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:26:43,119 -  * Restarting with stat
+2025-04-23 15:26:45,962 -  * Debugger is active!
+2025-04-23 15:26:45,966 -  * Debugger PIN: 943-887-770
+2025-04-23 15:52:07,359 -  * Detected change in 'C:\\ats\\fix_unmatched_with_gpt.py', reloading
+2025-04-23 15:52:07,559 -  * Restarting with stat
+2025-04-23 15:52:10,416 -  * Debugger is active!
+2025-04-23 15:52:10,419 -  * Debugger PIN: 943-887-770
+2025-04-23 15:52:45,370 -  * Detected change in 'C:\\ats\\add_last_attempt_column.py', reloading
+2025-04-23 15:52:45,606 -  * Restarting with stat
+2025-04-23 15:52:48,333 -  * Debugger is active!
+2025-04-23 15:52:48,336 -  * Debugger PIN: 943-887-770
+2025-04-23 15:52:58,278 -  * Detected change in 'C:\\ats\\add_last_attempt_column.py', reloading
+2025-04-23 15:52:58,468 -  * Restarting with stat
+2025-04-23 15:53:01,247 -  * Debugger is active!
+2025-04-23 15:53:01,250 -  * Debugger PIN: 943-887-770
+2025-04-23 15:57:37,629 -  * Detected change in 'C:\\ats\\check_counts.py', reloading
+2025-04-23 15:57:37,848 -  * Restarting with stat
+2025-04-23 15:57:41,097 -  * Debugger is active!
+2025-04-23 15:57:41,103 -  * Debugger PIN: 943-887-770
+2025-04-23 15:59:59,449 -  * Detected change in 'C:\\ats\\check_counts.py', reloading
+2025-04-23 15:59:59,676 -  * Restarting with stat
+2025-04-23 16:00:02,908 -  * Debugger is active!
+2025-04-23 16:00:02,913 -  * Debugger PIN: 943-887-770
+2025-04-23 16:00:08,548 -  * Detected change in 'C:\\ats\\verify_standard_values.py', reloading
+2025-04-23 16:00:08,762 -  * Restarting with stat
+2025-04-23 16:00:11,592 -  * Debugger is active!
+2025-04-23 16:00:11,595 -  * Debugger PIN: 943-887-770

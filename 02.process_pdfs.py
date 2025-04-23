@@ -63,7 +63,6 @@ cvs_directory = r"C:\cvs"
 # Function to extract text from PDF using OCR
 def extract_text_from_pdf(pdf_path):
     try:
-        # Convert PDF to images
         images = convert_from_path(
             pdf_path,
             poppler_path=r"C:\poppler\Library\bin"
@@ -72,7 +71,6 @@ def extract_text_from_pdf(pdf_path):
         text = ""
         for img in images:
             try:
-                # Extract text from each page
                 text += pytesseract.image_to_string(img) + "\n"
             except Exception as e:
                 print(f"OCR error on page: {e}")
@@ -198,73 +196,87 @@ def insert_data_to_db(cursor, conn, pdf_filename, ocr_text, extracted_info):
         conn.rollback()
         return False
 
-# Function to process all PDFs in the specified directory
+def estimate_token_cost(text):
+    # Rough estimation: 1 token ≈ 4 characters
+    num_tokens = len(text) / 4
+    cost_per_1k_tokens = 0.0015
+    return (num_tokens / 1000) * cost_per_1k_tokens
+
 def process_pdfs_in_directory(directory_path):
     # Setup database connection
     conn, cursor = setup_database()
     if not conn or not cursor:
-        print("Failed to setup database connection. Exiting.")
         return
 
-    # Create directory if it doesn't exist
-    os.makedirs(directory_path, exist_ok=True)
-
-    # Start a transaction
-    conn.autocommit = False
-
     try:
-        # Get list of already processed files from database
-        cursor.execute("SELECT pdf_filename FROM pdf_extracted_data")
-        processed_files = {row[0] for row in cursor.fetchall()}
-        print(f"Found {len(processed_files)} already processed files in database")
-
-        # Process each PDF file
-        new_files = 0
-        for filename in os.listdir(directory_path):
-            if filename.endswith(".pdf"):
-                # Skip if file is already processed
-                if filename in processed_files:
-                    print(f"Skipping already processed file: {filename}")
-                    continue
-
-                file_path = os.path.join(directory_path, filename)
-                print(f"\nProcessing new file: {filename}")
-                new_files += 1
-
-                # Extract text using OCR
-                ocr_text = extract_text_from_pdf(file_path)
-                if not ocr_text:
-                    print(f"Failed to extract text from {filename}")
-                    continue
-
-                # Extract structured information using AI
-                extracted_info = extract_info_with_ai(ocr_text)
-                if not extracted_info:
-                    print(f"Failed to extract structured info from {filename}")
-                    continue
-
-                # Insert data into database
-                try:
-                    # Double-check if file was processed by another process while we were working
-                    cursor.execute("SELECT id FROM pdf_extracted_data WHERE pdf_filename = %s", (filename,))
-                    if cursor.fetchone():
-                        print(f"File was processed by another process while we were working: {filename}")
-                        continue
-
-                    # Insert the extracted data into the database
-                    if insert_data_to_db(cursor, conn, filename, ocr_text, extracted_info):
-                        conn.commit()
-                except Exception as e:
-                    print(f"Database insertion error for {filename}: {e}")
-                    conn.rollback()
-                    continue
-
-        print(f"\nProcessing completed. Processed {new_files} new files.")
+        # Get list of PDF files
+        pdf_files = [f for f in os.listdir(directory_path) if f.endswith('.pdf')]
+        unprocessed_files = []
+        
+        # Check which files haven't been processed
+        for pdf_file in pdf_files:
+            cursor.execute("SELECT id FROM pdf_extracted_data WHERE pdf_filename = %s", (pdf_file,))
+            if not cursor.fetchone():
+                unprocessed_files.append(pdf_file)
+        
+        if not unprocessed_files:
+            print("No new PDFs to process.")
+            return
+            
+        total_files = len(unprocessed_files)
+        print(f"Found {total_files} unprocessed PDFs")
+        
+        # Calculate total estimated cost
+        total_estimated_cost = 0
+        for pdf_file in unprocessed_files:
+            pdf_path = os.path.join(directory_path, pdf_file)
+            ocr_text = extract_text_from_pdf(pdf_path)
+            if ocr_text:
+                total_estimated_cost += estimate_token_cost(ocr_text)
+        
+        print(f"Estimated total cost: ${total_estimated_cost:.3f}")
+        print("Starting processing...")
+        
+        # Process all files
+        successful = 0
+        failed = 0
+        
+        for index, pdf_file in enumerate(unprocessed_files, 1):
+            pdf_path = os.path.join(directory_path, pdf_file)
+            print(f"\nProcessing [{index}/{total_files}]: {pdf_file}")
+            
+            # Extract text using OCR
+            ocr_text = extract_text_from_pdf(pdf_path)
+            if not ocr_text:
+                print(f"❌ Skipping {pdf_file} - could not extract text")
+                failed += 1
+                continue
+            
+            # Extract information using AI
+            extracted_info = extract_info_with_ai(ocr_text)
+            if not extracted_info:
+                print(f"❌ Failed to extract information from {pdf_file}")
+                failed += 1
+                continue
+            
+            # Store in database
+            success = insert_data_to_db(cursor, conn, pdf_file, ocr_text, extracted_info)
+            if success:
+                print(f"✓ Successfully processed: {pdf_file}")
+                successful += 1
+            else:
+                print(f"❌ Failed to process: {pdf_file}")
+                failed += 1
+        
+        print(f"\nProcessing complete!")
+        print(f"✓ Successfully processed: {successful} files")
+        print(f"❌ Failed to process: {failed} files")
+        print(f"Total processed: {successful + failed} files")
+        print(f"Estimated total cost spent: ${total_estimated_cost:.3f}")
+            
     except Exception as e:
-        print(f"Error during processing: {e}")
-        conn.rollback()
+        print(f"Error: {e}")
     finally:
-        conn.autocommit = True
         cursor.close()
         conn.close()
 

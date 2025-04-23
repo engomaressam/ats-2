@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Search CVs</h2>
+    <form method="GET" action="{{ url_for('search') }}" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="keywords">Keywords:</label>
+                    <input type="text" class="form-control" id="keywords" name="keywords" value="{{ keywords }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <select class="form-control" id="department" name="department">
+                        <option value="">All Departments</option>
+                        {% for dept in departments %}
+                        <option value="{{ dept }}" {% if department == dept %}selected{% endif %}>{{ dept }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="job_title">Job Title:</label>
+                    <select class="form-control" id="job_title" name="job_title">
+                        <option value="">All Job Titles</option>
+                        {% for title in job_titles %}
+                        <option value="{{ title }}" {% if job_title == title %}selected{% endif %}>{{ title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label class="d-block">&nbsp;</label>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="results mt-4">
+        <h3>Results ({{ count }} found)</h3>
+        {% if results %}
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Filename</th>
+                            <th>Department</th>
+                            <th>Job Title</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in results %}
+                        <tr>
+                            <td>{{ result.id }}</td>
+                            <td>{{ result.pdf_filename }}</td>
+                            <td>{{ result.department or 'N/A' }}</td>
+                            <td>{{ result.job_title or 'N/A' }}</td>
+                            <td>
+                                <a href="{{ url_for('view_cv', cv_id=result.id) }}" class="btn btn-sm btn-info">View Details</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 

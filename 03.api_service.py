@@ -29,31 +29,185 @@ def search_cvs():
     try:
         # Get search parameters
         keywords = request.args.get('keywords', '').strip()
-        if not keywords:
-            return jsonify({"error": "No search keywords provided"}), 400
+        department = request.args.get('department', '').strip()
+        job_title = request.args.get('job_title', '').strip()
+        search_type = request.args.get('search_type', 'AND').strip().upper()  # AND or OR
 
-        # Create keyword conditions for SQL
-        keyword_list = [keyword.strip() for keyword in keywords.split(',')]
-        keyword_conditions = " OR ".join([
-            "LOWER(ocr_result) LIKE LOWER(%s)"
-            for _ in keyword_list
-        ])
+        conditions = []
+        params = []
 
-        # Create parameter list for SQL query
-        params = [f"%{keyword}%" for keyword in keyword_list]
+        # Add keyword search if provided
+        if keywords:
+            keyword_list = [keyword.strip() for keyword in keywords.split(',')]
+            keyword_conditions = []
+            for keyword in keyword_list:
+                keyword_conditions.append("LOWER(ocr_result) LIKE LOWER(%s)")
+                params.append(f"%{keyword}%")
+            
+            # Combine keywords with AND or OR
+            operator = " AND " if search_type == "AND" else " OR "
+            conditions.append(f"({operator.join(keyword_conditions)})")
+
+        # Add department filter if provided
+        if department:
+            conditions.append("LOWER(department) = LOWER(%s)")
+            params.append(department)
+
+        # Add job title filter if provided
+        if job_title:
+            conditions.append("LOWER(job_title) = LOWER(%s)")
+            params.append(job_title)
+
+        # Combine all conditions with AND
+        where_clause = " AND ".join(conditions) if conditions else "1=1"
 
         # Connect to database and execute search
         with get_db_connection() as conn:
             with conn.cursor() as cur:
                 query = f"""
-                    SELECT id, pdf_filename, name, email
+                    SELECT id, pdf_filename, name, email, department, job_title, 
+                           years_of_experience, current_company, location
                     FROM pdf_extracted_data
-                    WHERE {keyword_conditions}
+                    WHERE {where_clause}
                 """
                 cur.execute(query, params)
                 results = cur.fetchall()
 
         # Convert results to list of dictionaries
+        cvs = [dict(row) for row in results]
+        return jsonify({
+            "count": len(cvs),
+            "results": cvs
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/search/skills', methods=['GET'])
+def search_skills():
+    """Search CVs by keywords in skills field only"""
+    try:
+        keywords = request.args.get('keywords', '').strip()
+        search_type = request.args.get('search_type', 'AND').strip().upper()  # AND or OR
+        department = request.args.get('department', '').strip()
+        job_title = request.args.get('job_title', '').strip()
+
+        conditions = []
+        params = []
+
+        # Add skills keyword search if provided
+        if keywords:
+            keyword_list = [keyword.strip() for keyword in keywords.split(',')]
+            keyword_conditions = []
+            for keyword in keyword_list:
+                keyword_conditions.append("LOWER(skills) LIKE LOWER(%s)")
+                params.append(f"%{keyword}%")
+            
+            # Combine keywords with AND or OR
+            operator = " AND " if search_type == "AND" else " OR "
+            conditions.append(f"({operator.join(keyword_conditions)})")
+
+        # Add department filter if provided
+        if department:
+            conditions.append("LOWER(department) = LOWER(%s)")
+            params.append(department)
+
+        # Add job title filter if provided
+        if job_title:
+            conditions.append("LOWER(job_title) = LOWER(%s)")
+            params.append(job_title)
+
+        # Combine all conditions with AND
+        where_clause = " AND ".join(conditions) if conditions else "1=1"
+
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                query = f"""
+                    SELECT id, pdf_filename, name, email, department, job_title, 
+                           years_of_experience, current_company, location, skills
+                    FROM pdf_extracted_data
+                    WHERE {where_clause}
+                """
+                cur.execute(query, params)
+                results = cur.fetchall()
+
+        cvs = [dict(row) for row in results]
+        return jsonify({
+            "count": len(cvs),
+            "results": cvs
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/search/advanced', methods=['GET'])
+def advanced_search():
+    """Advanced search with multiple field-specific filters"""
+    try:
+        # Get all possible search parameters
+        params = {}
+        conditions = []
+        query_params = []
+
+        # Text search fields
+        text_fields = {
+            'name': request.args.get('name', '').strip(),
+            'email': request.args.get('email', '').strip(),
+            'skills': request.args.get('skills', '').strip(),
+            'languages': request.args.get('languages', '').strip(),
+            'certifications': request.args.get('certifications', '').strip(),
+            'project_types': request.args.get('project_types', '').strip(),
+            'university': request.args.get('university', '').strip()
+        }
+
+        # Exact match fields
+        exact_fields = {
+            'department': request.args.get('department', '').strip(),
+            'job_title': request.args.get('job_title', '').strip(),
+            'current_company': request.args.get('current_company', '').strip(),
+            'location': request.args.get('location', '').strip()
+        }
+
+        # Numeric fields
+        numeric_fields = {
+            'years_of_experience': request.args.get('years_of_experience', '').strip(),
+            'graduation_year': request.args.get('graduation_year', '').strip()
+        }
+
+        # Add text search conditions
+        for field, value in text_fields.items():
+            if value:
+                conditions.append(f"LOWER({field}) LIKE LOWER(%s)")
+                query_params.append(f"%{value}%")
+
+        # Add exact match conditions
+        for field, value in exact_fields.items():
+            if value:
+                conditions.append(f"LOWER({field}) = LOWER(%s)")
+                query_params.append(value)
+
+        # Add numeric conditions
+        for field, value in numeric_fields.items():
+            if value:
+                conditions.append(f"{field} = %s")
+                query_params.append(value)
+
+        # Combine all conditions with AND
+        where_clause = " AND ".join(conditions) if conditions else "1=1"
+
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                query = f"""
+                    SELECT id, pdf_filename, name, email, department, job_title, 
+                           years_of_experience, current_company, location, skills,
+                           languages, certifications, project_types, university,
+                           graduation_year
+                    FROM pdf_extracted_data
+                    WHERE {where_clause}
+                """
+                cur.execute(query, query_params)
+                results = cur.fetchall()
+
         cvs = [dict(row) for row in results]
         return jsonify({
             "count": len(cvs),
@@ -84,6 +238,42 @@ def get_cv_file(filename):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/departments', methods=['GET'])
+def get_departments():
+    """Get list of all departments"""
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT DISTINCT department 
+                    FROM pdf_extracted_data 
+                    WHERE department IS NOT NULL 
+                    ORDER BY department
+                """)
+                results = cur.fetchall()
+                departments = [row['department'] for row in results]
+                return jsonify(departments)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/job-titles', methods=['GET'])
+def get_job_titles():
+    """Get list of all job titles"""
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT DISTINCT job_title 
+                    FROM pdf_extracted_data 
+                    WHERE job_title IS NOT NULL 
+                    ORDER BY job_title
+                """)
+                results = cur.fetchall()
+                job_titles = [row['job_title'] for row in results]
+                return jsonify(job_titles)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/api/cv/details/<int:cv_id>', methods=['GET'])
 def get_cv_details(cv_id):
     """Get detailed information about a specific CV"""
@@ -91,7 +281,10 @@ def get_cv_details(cv_id):
         with get_db_connection() as conn:
             with conn.cursor() as cur:
                 cur.execute("""
-                    SELECT id, pdf_filename, name, email
+                    SELECT id, pdf_filename, name, email, department, job_title,
+                           years_of_experience, current_company, location, languages,
+                           certifications, project_types, skills, graduation_year,
+                           university, linkedin
                     FROM pdf_extracted_data
                     WHERE id = %s
                 """, (cv_id,))
