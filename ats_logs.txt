@@ -19701,3 +19701,21 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-04-23 16:00:08,762 -  * Restarting with stat
 2025-04-23 16:00:11,592 -  * Debugger is active!
 2025-04-23 16:00:11,595 -  * Debugger PIN: 943-887-770
+2025-04-23 16:01:55,210 -  * Detected change in 'C:\\ats\\fix_non_standard_values.py', reloading
+2025-04-23 16:01:55,424 -  * Restarting with stat
+2025-04-23 16:01:58,481 -  * Debugger is active!
+2025-04-23 16:01:58,485 -  * Debugger PIN: 943-887-770
+2025-04-23 16:02:29,083 -  * Detected change in 'C:\\ats\\fix_non_standard_values.py', reloading
+2025-04-23 16:02:29,282 -  * Restarting with stat
+2025-04-23 16:02:32,183 -  * Debugger is active!
+2025-04-23 16:02:32,186 -  * Debugger PIN: 943-887-770
+2025-04-23 16:03:10,490 -  * Detected change in 'C:\\ats\\fix_non_standard_values.py', reloading
+2025-04-23 16:03:10,696 -  * Restarting with stat
+2025-04-23 16:03:13,413 -  * Debugger is active!
+2025-04-23 16:03:13,417 -  * Debugger PIN: 943-887-770
+2025-04-23 16:19:00,900 - 10.10.13.227 - - [23/Apr/2025 16:19:00] "GET /search HTTP/1.1" 200 -
+2025-04-23 16:19:01,743 - 10.10.13.227 - - [23/Apr/2025 16:19:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-23 16:19:22,541 - 10.10.13.227 - - [23/Apr/2025 16:19:22] "GET /search?keywords=&department=hse&job_title= HTTP/1.1" 200 -
+2025-04-23 16:20:03,797 - 10.10.13.227 - - [23/Apr/2025 16:20:03] "GET /search?keywords=&department=information+technology&job_title= HTTP/1.1" 200 -
+2025-04-23 16:22:01,677 -  * Detected change in 'C:\\ats\\check_unique_combinations.py', reloading
+2025-04-23 16:22:01,898 -  * Restarting with stat
