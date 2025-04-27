@@ -110,12 +110,43 @@ def update_job_titles():
         conn.close()
         print("Database connection closed")
 
+def fix_special_departments():
+    print("\n=== Fixing Special Department Cases ===")
+    conn = connect_db()
+    cur = conn.cursor()
+    try:
+        # Merge 'Csr - human resources' and 'Human resources' into 'HR'
+        cur.execute("""
+            UPDATE pdf_extracted_data
+            SET department = 'HR'
+            WHERE department IN ('Csr - human resources', 'Human resources');
+        """)
+        print("Merged 'Csr - human resources' and 'Human resources' into 'HR'")
+        # Set 'Pmo (project management office)' to 'PMO'
+        cur.execute("""
+            UPDATE pdf_extracted_data
+            SET department = 'PMO'
+            WHERE department = 'Pmo (project management office)';
+        """)
+        print("Set 'Pmo (project management office)' to 'PMO'")
+        conn.commit()
+        print("Special department cases fixed successfully")
+    except Exception as e:
+        print(f"Error fixing special departments: {str(e)}")
+        conn.rollback()
+        raise
+    finally:
+        cur.close()
+        conn.close()
+        print("Database connection closed")
+
 if __name__ == "__main__":
     try:
         print("Starting database operations...")
         create_backup()
         update_department_names()
         update_job_titles()
+        fix_special_departments()
         print("\nAll operations completed successfully!")
     except Exception as e:
         print(f"\nScript failed with error: {str(e)}")

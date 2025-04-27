@@ -19719,3 +19719,29 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-04-23 16:20:03,797 - 10.10.13.227 - - [23/Apr/2025 16:20:03] "GET /search?keywords=&department=information+technology&job_title= HTTP/1.1" 200 -
 2025-04-23 16:22:01,677 -  * Detected change in 'C:\\ats\\check_unique_combinations.py', reloading
 2025-04-23 16:22:01,898 -  * Restarting with stat
+2025-04-27 10:13:05,027 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-27 10:13:05,027 - [33mPress CTRL+C to quit[0m
+2025-04-27 10:13:05,029 -  * Restarting with stat
+2025-04-27 10:13:07,715 -  * Debugger is active!
+2025-04-27 10:13:07,718 -  * Debugger PIN: 443-502-652
+2025-04-27 10:15:43,857 - 10.10.13.159 - - [27/Apr/2025 10:15:43] "GET /search HTTP/1.1" 200 -
+2025-04-27 10:15:45,262 - 10.10.13.159 - - [27/Apr/2025 10:15:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 10:16:10,410 - 10.10.13.159 - - [27/Apr/2025 10:16:10] "GET /search?keywords=&department=Pmo+(project+management+office)&job_title= HTTP/1.1" 200 -
+2025-04-27 10:16:53,184 - 10.10.13.159 - - [27/Apr/2025 10:16:53] "GET /search?keywords=&department=Csr+-+human+resources&job_title= HTTP/1.1" 200 -
+2025-04-27 10:18:10,162 - 10.10.13.159 - - [27/Apr/2025 10:18:10] "GET /search?keywords=&department=Human+resources&job_title= HTTP/1.1" 200 -
+2025-04-27 10:20:00,535 -  * Detected change in 'C:\\ats\\update_departments.py', reloading
+2025-04-27 10:20:00,703 -  * Restarting with stat
+2025-04-27 10:20:03,452 -  * Debugger is active!
+2025-04-27 10:20:03,455 -  * Debugger PIN: 443-502-652
+2025-04-27 11:55:29,947 -  * Detected change in 'C:\\ats\\update_departments.py', reloading
+2025-04-27 11:55:30,153 -  * Restarting with stat
+2025-04-27 11:55:35,765 -  * Debugger is active!
+2025-04-27 11:55:35,768 -  * Debugger PIN: 443-502-652
+2025-04-27 13:53:11,167 - 10.10.13.159 - - [27/Apr/2025 13:53:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-27 13:53:12,562 - 10.10.13.159 - - [27/Apr/2025 13:53:12] "GET / HTTP/1.1" 200 -
+2025-04-27 13:53:26,781 - 10.10.13.159 - - [27/Apr/2025 13:53:26] "GET /search HTTP/1.1" 200 -
+2025-04-27 13:53:51,163 - 10.10.13.159 - - [27/Apr/2025 13:53:51] "GET /search HTTP/1.1" 200 -
+2025-04-27 13:53:56,846 - 10.10.13.159 - - [27/Apr/2025 13:53:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
