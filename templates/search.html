@@ -51,6 +51,11 @@
     <div class="results mt-4">
         <h3>Results ({{ count }} found)</h3>
         {% if results %}
+            <div class="mb-2">
+                {% set start_idx = ((page-1)*per_page)+1 if count > 0 else 0 %}
+                {% set end_idx = ((page-1)*per_page)+results|length %}
+                <span>Showing {{ start_idx }}–{{ end_idx }} of {{ count }}</span>
+            </div>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -77,6 +82,23 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Pagination Controls -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% set total_pages = (count // per_page) + (1 if count % per_page > 0 else 0) %}
+                    <li class="page-item {% if page == 1 %}disabled{% endif %}">
+                        <a class="page-link" href="{{ url_for('search', keywords=keywords, department=department, job_title=job_title, page=page-1, per_page=per_page) }}">Previous</a>
+                    </li>
+                    {% for p in range(1, total_pages+1) %}
+                        <li class="page-item {% if p == page %}active{% endif %}">
+                            <a class="page-link" href="{{ url_for('search', keywords=keywords, department=department, job_title=job_title, page=p, per_page=per_page) }}">{{ p }}</a>
+                        </li>
+                    {% endfor %}
+                    <li class="page-item {% if page == total_pages %}disabled{% endif %}">
+                        <a class="page-link" href="{{ url_for('search', keywords=keywords, department=department, job_title=job_title, page=page+1, per_page=per_page) }}">Next</a>
+                    </li>
+                </ul>
+            </nav>
         {% else %}
             <p>No results found.</p>
         {% endif %}

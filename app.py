@@ -158,6 +158,8 @@ def search():
     keywords = request.args.get('keywords', '')
     department = request.args.get('department', '')
     job_title = request.args.get('job_title', '')
+    page = int(request.args.get('page', 1))
+    per_page = int(request.args.get('per_page', 100))
 
     # Get departments and job titles for filters
     departments_response = requests.get(f'{API_URL}/api/departments')
@@ -167,7 +169,7 @@ def search():
     job_titles = job_titles_response.json() if job_titles_response.ok else []
 
     # Build search URL with parameters
-    search_params = {}
+    search_params = {'page': page, 'per_page': per_page}
     if keywords:
         search_params['keywords'] = keywords
     if department:
@@ -187,7 +189,9 @@ def search():
                              department=department,
                              job_title=job_title,
                              departments=departments,
-                             job_titles=job_titles)
+                             job_titles=job_titles,
+                             page=results.get('page', 1),
+                             per_page=results.get('per_page', 100))
     else:
         flash('Error searching CVs: ' + response.json().get('error', 'Unknown error'))
         return render_template('search.html', 
@@ -197,7 +201,9 @@ def search():
                              department=department,
                              job_title=job_title,
                              departments=departments,
-                             job_titles=job_titles)
+                             job_titles=job_titles,
+                             page=page,
+                             per_page=per_page)
 
 @app.route('/cv/<int:cv_id>')
 def view_cv(cv_id):

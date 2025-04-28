@@ -25,13 +25,15 @@ def get_db_connection():
 
 @app.route('/api/search', methods=['GET'])
 def search_cvs():
-    """Search CVs by keywords in OCR text and other fields"""
+    """Search CVs by keywords in OCR text and other fields, with pagination"""
     try:
         # Get search parameters
         keywords = request.args.get('keywords', '').strip()
         department = request.args.get('department', '').strip()
         job_title = request.args.get('job_title', '').strip()
         search_type = request.args.get('search_type', 'AND').strip().upper()  # AND or OR
+        page = int(request.args.get('page', 1))
+        per_page = int(request.args.get('per_page', 100))
 
         conditions = []
         params = []
@@ -43,8 +45,6 @@ def search_cvs():
             for keyword in keyword_list:
                 keyword_conditions.append("LOWER(ocr_result) LIKE LOWER(%s)")
                 params.append(f"%{keyword}%")
-            
-            # Combine keywords with AND or OR
             operator = " AND " if search_type == "AND" else " OR "
             conditions.append(f"({operator.join(keyword_conditions)})")
 
@@ -64,20 +64,30 @@ def search_cvs():
         # Connect to database and execute search
         with get_db_connection() as conn:
             with conn.cursor() as cur:
+                # Get total count
+                count_query = f"SELECT COUNT(*) FROM pdf_extracted_data WHERE {where_clause}"
+                cur.execute(count_query, params)
+                total_count = cur.fetchone()['count']
+
+                # Get paginated results
+                offset = (page - 1) * per_page
                 query = f"""
                     SELECT id, pdf_filename, name, email, department, job_title, 
                            years_of_experience, current_company, location
                     FROM pdf_extracted_data
                     WHERE {where_clause}
+                    ORDER BY id DESC
+                    LIMIT %s OFFSET %s
                 """
-                cur.execute(query, params)
+                cur.execute(query, params + [per_page, offset])
                 results = cur.fetchall()
 
-        # Convert results to list of dictionaries
         cvs = [dict(row) for row in results]
         return jsonify({
-            "count": len(cvs),
-            "results": cvs
+            "count": total_count,
+            "results": cvs,
+            "page": page,
+            "per_page": per_page
         })
 
     except Exception as e:
