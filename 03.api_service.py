@@ -152,55 +152,36 @@ def search_skills():
 
 @app.route('/api/search/advanced', methods=['GET'])
 def advanced_search():
-    """Advanced search with multiple field-specific filters"""
+    """Advanced search with multiple field-specific filters, supporting all columns."""
     try:
         # Get all possible search parameters
         params = {}
         conditions = []
         query_params = []
 
-        # Text search fields
-        text_fields = {
-            'name': request.args.get('name', '').strip(),
-            'email': request.args.get('email', '').strip(),
-            'skills': request.args.get('skills', '').strip(),
-            'languages': request.args.get('languages', '').strip(),
-            'certifications': request.args.get('certifications', '').strip(),
-            'project_types': request.args.get('project_types', '').strip(),
-            'university': request.args.get('university', '').strip()
-        }
+        # List all columns to support as filters and in results
+        all_columns = [
+            'id', 'pdf_filename', 'name', 'email', 'department', 'job_title',
+            'years_of_experience', 'current_company', 'location', 'skills',
+            'languages', 'certifications', 'project_types', 'university',
+            'graduation_year',
+            'status_1', 'status_2', 'status_3',
+            'modified_by_1', 'modified_by_2', 'modified_by_3',
+            'last_attempt', 'confidence',
+            'linkedin'
+        ]
 
-        # Exact match fields
-        exact_fields = {
-            'department': request.args.get('department', '').strip(),
-            'job_title': request.args.get('job_title', '').strip(),
-            'current_company': request.args.get('current_company', '').strip(),
-            'location': request.args.get('location', '').strip()
-        }
-
-        # Numeric fields
-        numeric_fields = {
-            'years_of_experience': request.args.get('years_of_experience', '').strip(),
-            'graduation_year': request.args.get('graduation_year', '').strip()
-        }
-
-        # Add text search conditions
-        for field, value in text_fields.items():
+        # Add filter for each column if present in query string
+        for col in all_columns:
+            value = request.args.get(col, '').strip()
             if value:
-                conditions.append(f"LOWER({field}) LIKE LOWER(%s)")
-                query_params.append(f"%{value}%")
-
-        # Add exact match conditions
-        for field, value in exact_fields.items():
-            if value:
-                conditions.append(f"LOWER({field}) = LOWER(%s)")
-                query_params.append(value)
-
-        # Add numeric conditions
-        for field, value in numeric_fields.items():
-            if value:
-                conditions.append(f"{field} = %s")
-                query_params.append(value)
+                # Numeric columns (id, years_of_experience, graduation_year)
+                if col in ['id', 'years_of_experience', 'graduation_year', 'confidence']:
+                    conditions.append(f"{col} = %s")
+                    query_params.append(value)
+                else:
+                    conditions.append(f"LOWER({col}) = LOWER(%s)")
+                    query_params.append(value)
 
         # Combine all conditions with AND
         where_clause = " AND ".join(conditions) if conditions else "1=1"
@@ -208,10 +189,7 @@ def advanced_search():
         with get_db_connection() as conn:
             with conn.cursor() as cur:
                 query = f"""
-                    SELECT id, pdf_filename, name, email, department, job_title, 
-                           years_of_experience, current_company, location, skills,
-                           languages, certifications, project_types, university,
-                           graduation_year
+                    SELECT {', '.join(all_columns)}
                     FROM pdf_extracted_data
                     WHERE {where_clause}
                 """
@@ -305,6 +283,39 @@ def get_cv_details(cv_id):
 
                 return jsonify(dict(result))
 
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/cv/update_status/<int:cv_id>', methods=['POST'])
+def update_cv_status(cv_id):
+    """
+    Update status and modified_by columns for a CV.
+    Expects JSON like:
+    {
+        "status_1": "...", "status_2": "...", "status_3": "...",
+        "modified_by_1": "...", "modified_by_2": "...", "modified_by_3": "..."
+    }
+    """
+    data = request.json
+    fields = ['status_1', 'status_2', 'status_3', 'modified_by_1', 'modified_by_2', 'modified_by_3']
+    updates = []
+    values = []
+    for field in fields:
+        if field in data:
+            updates.append(f"{field} = %s")
+            values.append(data[field])
+    if not updates:
+        return jsonify({"error": "No valid fields to update"}), 400
+    values.append(cv_id)
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    f"UPDATE pdf_extracted_data SET {', '.join(updates)} WHERE id = %s",
+                    values
+                )
+                conn.commit()
+        return jsonify({"success": True})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

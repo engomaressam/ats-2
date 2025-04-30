@@ -19745,3 +19745,48 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-04-27 13:53:26,781 - 10.10.13.159 - - [27/Apr/2025 13:53:26] "GET /search HTTP/1.1" 200 -
 2025-04-27 13:53:51,163 - 10.10.13.159 - - [27/Apr/2025 13:53:51] "GET /search HTTP/1.1" 200 -
 2025-04-27 13:53:56,846 - 10.10.13.159 - - [27/Apr/2025 13:53:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 10:09:41,320 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-28 10:09:41,320 - [33mPress CTRL+C to quit[0m
+2025-04-28 10:09:41,322 -  * Restarting with stat
+2025-04-28 10:09:44,052 -  * Debugger is active!
+2025-04-28 10:09:44,055 -  * Debugger PIN: 443-502-652
+2025-04-28 10:10:52,635 - 10.10.13.159 - - [28/Apr/2025 10:10:52] "GET /search HTTP/1.1" 200 -
+2025-04-28 10:10:53,863 - 10.10.13.159 - - [28/Apr/2025 10:10:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 10:11:11,285 - 10.10.13.159 - - [28/Apr/2025 10:11:11] "GET /search?keywords=&department=MEP&job_title= HTTP/1.1" 200 -
+2025-04-28 10:11:17,648 - 10.10.13.159 - - [28/Apr/2025 10:11:17] "GET /cv/64 HTTP/1.1" 200 -
+2025-04-28 10:11:25,541 - 10.10.13.159 - - [28/Apr/2025 10:11:25] "GET /cv/file/2025-01-03_Sohila%20%20CV%20.pdf HTTP/1.1" 200 -
+2025-04-28 11:48:23,820 - 10.10.13.125 - - [28/Apr/2025 11:48:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 14:05:44,103 - 10.10.13.159 - - [28/Apr/2025 14:05:44] "GET /search HTTP/1.1" 200 -
+2025-04-28 14:05:45,295 - 10.10.13.159 - - [28/Apr/2025 14:05:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 10:26:50,108 -  * Detected change in 'C:\\ats\\add_status_columns.py', reloading
+2025-04-29 10:26:50,311 -  * Restarting with stat
+2025-04-29 10:26:55,710 -  * Debugger is active!
+2025-04-29 10:26:55,713 -  * Debugger PIN: 443-502-652
+2025-04-29 10:28:08,076 -  * Detected change in 'C:\\ats\\add_status_columns.py', reloading
+2025-04-29 10:28:08,303 -  * Restarting with stat
+2025-04-29 10:28:11,183 -  * Debugger is active!
+2025-04-29 10:28:11,186 -  * Debugger PIN: 443-502-652
+2025-04-29 10:36:15,906 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-29 10:36:15,906 - [33mPress CTRL+C to quit[0m
+2025-04-29 10:36:15,908 -  * Restarting with stat
+2025-04-29 10:36:18,660 -  * Debugger is active!
+2025-04-29 10:36:18,663 -  * Debugger PIN: 443-502-652
+2025-04-29 10:38:11,316 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-29 10:38:11,316 - [33mPress CTRL+C to quit[0m
+2025-04-29 10:38:11,318 -  * Restarting with stat
+2025-04-29 10:38:14,098 -  * Debugger is active!
+2025-04-29 10:38:14,101 -  * Debugger PIN: 443-502-652
+2025-04-29 12:42:22,682 - 10.10.13.159 - - [29/Apr/2025 12:42:22] "GET / HTTP/1.1" 200 -
+2025-04-29 14:06:39,919 -  * Detected change in 'C:\\ats\\03.api_service.py', reloading
+2025-04-29 14:06:40,122 -  * Restarting with stat
+2025-04-29 14:06:45,800 -  * Debugger is active!
+2025-04-29 14:06:45,803 -  * Debugger PIN: 443-502-652
