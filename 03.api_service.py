@@ -202,8 +202,10 @@ def advanced_search():
                     FROM pdf_extracted_data
                     WHERE {where_clause}
                 """
+                print(f"Executing query: {query} with params: {query_params}")
                 cur.execute(query, query_params)
                 results = cur.fetchall()
+                print(f"Query returned {len(results)} results. Sample result: {results[0] if results else 'No results'}")
 
         cvs = [dict(row) for row in results]
         return jsonify({

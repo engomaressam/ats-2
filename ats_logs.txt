@@ -19806,3 +19806,9 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-05-03 17:40:16,245 -  * Restarting with stat
 2025-05-03 17:40:19,032 -  * Debugger is active!
 2025-05-03 17:40:19,035 -  * Debugger PIN: 443-502-652
+2025-05-04 09:56:45,161 -  * Detected change in 'c:\\ats\\03.api_service.py', reloading
+2025-05-04 09:56:45,347 -  * Restarting with stat
+2025-05-04 09:56:48,074 -  * Debugger is active!
+2025-05-04 09:56:48,077 -  * Debugger PIN: 443-502-652
+2025-05-04 09:57:22,077 -  * Detected change in 'c:\\ats\\03.api_service.py', reloading
+2025-05-04 09:57:22,276 -  * Restarting with stat
