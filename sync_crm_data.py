@@ -76,7 +76,8 @@ def fetch_crm_applications_with_filenames_2025(session):
         "createdon",
         "modifiedon",
         "new_howdidyouhearaboutrowad",
-        "new_listouttheextrasocialactivities"
+        "new_listouttheextrasocialactivities",
+        "new_pleasesepcify"
     ]
     filter_condition = (
         f"createdon ge 2025-01-01T00:00:00Z and createdon le 2025-12-31T23:59:59Z"
@@ -115,63 +116,84 @@ def fetch_crm_applications_with_filenames_2025(session):
         return []
 
 def update_database(applications):
-    """Update database with CRM application data, matching by constructed pdf_filename (ignore case and spaces)"""
+    """Update the database with CRM data, including the new field 'new_pleasesepcify'"""
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
-        updated_count = 0
         for app in applications:
-            update_data = {
-                'crm_applicationid': app.get('new_jobapplicationid'),
-                'crm_fullname': app.get('new_fullname'),
-                'crm_contactphone': app.get('new_contactphone'),
-                'crm_telephonenumber': app.get('new_telephonenumber'),
-                'crm_gender': app.get('new_gender'),
-                'crm_position': app.get('new_position'),
-                'crm_employmenttype': app.get('new_employmenttype'),
-                'crm_expectedsalary': app.get('new_expectedsalary'),
-                'crm_dateavailableforemployment': app.get('new_dateavailableforemployment'),
-                'crm_currentsalary': app.get('new_currentsalary'),
-                'crm_company': app.get('new_company'),
-                'crm_graduationyear': app.get('new_graduationyear'),
-                'crm_qualitiesattributes': app.get('new_qualitiesattributes'),
-                'crm_careergoals': app.get('new_careergoals'),
-                'crm_additionalinformation': app.get('new_additionalinformation'),
-                'crm_appstatus': app.get('new_appstatus'),
-                'crm_hrinterviewstatus': app.get('new_hrinterviewstatus'),
-                'crm_technicalrating': app.get('new_technicalrating'),
-                'crm_technicalinterviewcomments': app.get('new_technicalinterviewcomments'),
-                'crm_hrcomment': app.get('new_hrcomment'),
-                'crm_createdon': app.get('createdon'),
-                'crm_modifiedon': app.get('modifiedon'),
-                'crm_howdidyouhearaboutrowad': app.get('new_howdidyouhearaboutrowad'),
-                'crm_extrasocialactivities': app.get('new_listouttheextrasocialactivities')
-            }
-            update_data = {k: v for k, v in update_data.items() if v is not None}
-            crm_filename = app.get('filename')
-            createdon = app.get('createdon')
-            if not crm_filename or not createdon or not update_data:
+            appid = app.get("new_jobapplicationid")
+            if not appid:
+                continue
+            filename = app.get("filename")
+            if not filename:
+                continue
+            createdon = app.get("createdon")
+            if not createdon:
                 continue
             created_date = str(createdon).split('T')[0]
-            expected_pdf_filename = f"{created_date}_{crm_filename}"
-            # Remove spaces and lowercase for comparison
-            set_clause = ", ".join([f"{k} = %({k})s" for k in update_data.keys()])
-            query = f"""
-                UPDATE pdf_extracted_data 
-                SET {set_clause}
-                WHERE REPLACE(LOWER(pdf_filename), ' ', '') = REPLACE(LOWER(%(expected_pdf_filename)s), ' ', '')
-            """
-            params = update_data.copy()
-            params['expected_pdf_filename'] = expected_pdf_filename
-            cursor.execute(query, params)
-            if cursor.rowcount > 0:
-                updated_count += 1
+            expected_pdf_filename = f"{created_date}_{filename}"
+            normalized = expected_pdf_filename.replace(' ', '').lower()
+            # Update the database with CRM data, including the new field
+            cursor.execute("""
+                UPDATE pdf_extracted_data
+                SET crm_applicationid = %s,
+                    crm_fullname = %s,
+                    crm_contactphone = %s,
+                    crm_telephonenumber = %s,
+                    crm_gender = %s,
+                    crm_position = %s,
+                    crm_employmenttype = %s,
+                    crm_expectedsalary = %s,
+                    crm_dateavailableforemployment = %s,
+                    crm_currentsalary = %s,
+                    crm_company = %s,
+                    crm_graduationyear = %s,
+                    crm_qualitiesattributes = %s,
+                    crm_careergoals = %s,
+                    crm_additionalinformation = %s,
+                    crm_appstatus = %s,
+                    crm_hrinterviewstatus = %s,
+                    crm_technicalrating = %s,
+                    crm_technicalinterviewcomments = %s,
+                    crm_hrcomment = %s,
+                    crm_createdon = %s,
+                    crm_modifiedon = %s,
+                    crm_howdidyouhearaboutrowad = %s,
+                    crm_extrasocialactivities = %s,
+                    crm_pleasesepcify = %s
+                WHERE LOWER(REPLACE(pdf_filename, ' ', '')) = LOWER(%s)
+            """, (
+                appid,
+                app.get("new_fullname"),
+                app.get("new_contactphone"),
+                app.get("new_telephonenumber"),
+                app.get("new_gender"),
+                app.get("new_position"),
+                app.get("new_employmenttype"),
+                app.get("new_expectedsalary"),
+                app.get("new_dateavailableforemployment"),
+                app.get("new_currentsalary"),
+                app.get("new_company"),
+                app.get("new_graduationyear"),
+                app.get("new_qualitiesattributes"),
+                app.get("new_careergoals"),
+                app.get("new_additionalinformation"),
+                app.get("new_appstatus"),
+                app.get("new_hrinterviewstatus"),
+                app.get("new_technicalrating"),
+                app.get("new_technicalinterviewcomments"),
+                app.get("new_hrcomment"),
+                app.get("createdon"),
+                app.get("modifiedon"),
+                app.get("new_howdidyouhearaboutrowad"),
+                app.get("new_listouttheextrasocialactivities"),
+                app.get("new_pleasesepcify"),
+                normalized
+            ))
         conn.commit()
-        print(f"Updated {updated_count} records in the database")
+        print(f"Updated {len(applications)} records in the database")
     except Exception as e:
         print(f"Error updating database: {e}")
-        if 'conn' in locals():
-            conn.rollback()
     finally:
         if 'cursor' in locals():
             cursor.close()

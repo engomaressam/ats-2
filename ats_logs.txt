@@ -19814,3 +19814,35 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-05-04 09:57:22,276 -  * Restarting with stat
 2025-05-04 09:57:25,079 -  * Debugger is active!
 2025-05-04 09:57:25,082 -  * Debugger PIN: 443-502-652
+2025-05-04 10:35:25,414 -  * Detected change in 'c:\\ats\\sync_crm_data.py', reloading
+2025-05-04 10:35:25,909 -  * Restarting with stat
+2025-05-04 10:35:30,888 -  * Debugger is active!
+2025-05-04 10:35:30,892 -  * Debugger PIN: 443-502-652
+2025-05-04 10:35:32,492 -  * Detected change in 'c:\\ats\\sync_crm_data.py', reloading
+2025-05-04 10:35:32,905 -  * Restarting with stat
+2025-05-04 10:35:37,019 -  * Debugger is active!
+2025-05-04 10:35:37,023 -  * Debugger PIN: 443-502-652
+2025-05-04 10:44:30,253 -  * Detected change in 'c:\\ats\\from.crm.to.postgres.all.py', reloading
+2025-05-04 10:44:30,468 -  * Restarting with stat
+2025-05-04 10:44:33,257 -  * Debugger is active!
+2025-05-04 10:44:33,260 -  * Debugger PIN: 443-502-652
+2025-05-04 10:48:12,338 -  * Detected change in 'c:\\ats\\sync_crm_data.py', reloading
+2025-05-04 10:48:12,518 -  * Restarting with stat
+2025-05-04 10:48:17,878 -  * Debugger is active!
+2025-05-04 10:48:17,881 -  * Debugger PIN: 443-502-652
+2025-05-04 10:48:26,052 -  * Detected change in 'c:\\ats\\03.api_service.py', reloading
+2025-05-04 10:48:26,313 -  * Restarting with stat
+2025-05-04 10:48:28,992 -  * Debugger is active!
+2025-05-04 10:48:28,995 -  * Debugger PIN: 443-502-652
+2025-05-04 10:48:43,849 -  * Detected change in 'c:\\ats\\sync_crm_data.py', reloading
+2025-05-04 10:48:44,040 -  * Restarting with stat
+2025-05-04 10:48:46,994 -  * Debugger is active!
+2025-05-04 10:48:46,997 -  * Debugger PIN: 443-502-652
+2025-05-04 10:49:58,525 -  * Detected change in 'c:\\ats\\add_column.py', reloading
+2025-05-04 10:49:58,788 -  * Restarting with stat
+2025-05-04 10:50:01,887 -  * Debugger is active!
+2025-05-04 10:50:01,890 -  * Debugger PIN: 443-502-652
+2025-05-04 10:51:10,980 -  * Detected change in 'c:\\ats\\add_column.py', reloading
+2025-05-04 10:51:11,167 -  * Restarting with stat
+2025-05-04 10:51:13,885 -  * Debugger is active!
+2025-05-04 10:51:13,889 -  * Debugger PIN: 443-502-652
