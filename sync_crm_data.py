@@ -49,9 +49,9 @@ def get_entity_metadata(session, entity_name):
         print(f"Error fetching metadata: {e}")
         return []
 
-def fetch_crm_applications_with_filenames(session):
-    """Fetch all job applications and their annotation filenames from CRM"""
-    print("Fetching all applications and annotation filenames (no date filter)...")
+def fetch_crm_applications_with_filenames_2025(session):
+    """Fetch all job applications and their annotation filenames from CRM for 2025 only"""
+    print("Fetching all applications and annotation filenames for 2025...")
     basic_fields = [
         "new_jobapplicationid",
         "new_fullname",
@@ -78,9 +78,13 @@ def fetch_crm_applications_with_filenames(session):
         "new_howdidyouhearaboutrowad",
         "new_listouttheextrasocialactivities"
     ]
+    filter_condition = (
+        f"createdon ge 2025-01-01T00:00:00Z and createdon le 2025-12-31T23:59:59Z"
+    )
     url = (
         f"{CRM_URL}/new_jobapplications?"
-        f"$select={','.join(basic_fields)}"
+        f"$select={','.join(basic_fields)}&"
+        f"$filter={filter_condition}"
     )
     try:
         print(f"\nTrying to fetch with fields: {', '.join(basic_fields)}")
@@ -93,14 +97,12 @@ def fetch_crm_applications_with_filenames(session):
             appid = app.get("new_jobapplicationid")
             if not appid:
                 continue
-            # Fetch annotation for this application
             annotation_url = f"{CRM_URL}/annotations?$select=filename&$filter=(_objectid_value eq {appid})"
             try:
                 ann_response = session.get(annotation_url)
                 ann_response.raise_for_status()
                 ann_data = ann_response.json()
                 if ann_data.get("value"):
-                    # Use the first annotation's filename
                     app["filename"] = ann_data["value"][0].get("filename")
                 else:
                     app["filename"] = None
@@ -113,7 +115,7 @@ def fetch_crm_applications_with_filenames(session):
         return []
 
 def update_database(applications):
-    """Update database with CRM application data, matching by constructed pdf_filename only"""
+    """Update database with CRM application data, matching by constructed pdf_filename (ignore case and spaces)"""
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -150,14 +152,14 @@ def update_database(applications):
             createdon = app.get('createdon')
             if not crm_filename or not createdon or not update_data:
                 continue
-            # Extract date part from createdon (format: YYYY-MM-DD)
             created_date = str(createdon).split('T')[0]
             expected_pdf_filename = f"{created_date}_{crm_filename}"
+            # Remove spaces and lowercase for comparison
             set_clause = ", ".join([f"{k} = %({k})s" for k in update_data.keys()])
             query = f"""
                 UPDATE pdf_extracted_data 
                 SET {set_clause}
-                WHERE pdf_filename = %(expected_pdf_filename)s
+                WHERE REPLACE(LOWER(pdf_filename), ' ', '') = REPLACE(LOWER(%(expected_pdf_filename)s), ' ', '')
             """
             params = update_data.copy()
             params['expected_pdf_filename'] = expected_pdf_filename
@@ -232,12 +234,49 @@ def manual_match_test(applications):
         if 'conn' in locals():
             conn.close()
 
+def print_comparison_samples(applications):
+    print("\nSample constructed expected_pdf_filename values from CRM (normalized):")
+    count = 0
+    for app in applications:
+        crm_filename = app.get('filename')
+        createdon = app.get('createdon')
+        if crm_filename and createdon:
+            created_date = str(createdon).split('T')[0]
+            expected_pdf_filename = f"{created_date}_{crm_filename}"
+            normalized = expected_pdf_filename.replace(' ', '').lower()
+            print(f"CRM: {normalized}")
+            count += 1
+        if count >= 20:
+            break
+
+    # Print 20 normalized pdf_filename values from the database
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT pdf_filename FROM pdf_extracted_data LIMIT 20;")
+        rows = cursor.fetchall()
+        print("\nSample normalized pdf_filename values from database:")
+        for row in rows:
+            db_normalized = row['pdf_filename'].replace(' ', '').lower()
+            print(f"DB: {db_normalized}")
+    except Exception as e:
+        print(f"Error fetching sample filenames from database: {e}")
+    finally:
+        if 'cursor' in locals():
+            cursor.close()
+        if 'conn' in locals():
+            conn.close()
+
 def main():
     print("Starting CRM data sync...")
     session = get_session()
-    applications = fetch_crm_applications_with_filenames(session)
-    print(f"Found {len(applications)} applications in CRM")
+    applications = fetch_crm_applications_with_filenames_2025(session)
+    print(f"Found {len(applications)} applications in CRM for 2025")
     if applications:
+        dates = [str(app.get('createdon')).split('T')[0] for app in applications if app.get('createdon')]
+        if dates:
+            print(f"CRM 2025 application date range: {min(dates)} to {max(dates)}")
+        print_comparison_samples(applications)
         update_database(applications)
     else:
         print("No applications found to sync")

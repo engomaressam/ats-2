@@ -19790,3 +19790,19 @@ Certified Therapeutic Nutritionist with expertise in clinical nutrition, quality
 2025-04-29 14:06:40,122 -  * Restarting with stat
 2025-04-29 14:06:45,800 -  * Debugger is active!
 2025-04-29 14:06:45,803 -  * Debugger PIN: 443-502-652
+2025-04-30 12:27:01,812 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-04-30 12:27:01,812 - [33mPress CTRL+C to quit[0m
+2025-04-30 12:27:01,814 -  * Restarting with stat
+2025-04-30 12:27:04,598 -  * Debugger is active!
+2025-04-30 12:27:04,601 -  * Debugger PIN: 443-502-652
+2025-05-03 17:40:16,243 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5055
+ * Running on http://10.10.11.243:5055
+2025-05-03 17:40:16,243 - [33mPress CTRL+C to quit[0m
+2025-05-03 17:40:16,245 -  * Restarting with stat
+2025-05-03 17:40:19,032 -  * Debugger is active!
+2025-05-03 17:40:19,035 -  * Debugger PIN: 443-502-652

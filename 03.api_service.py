@@ -152,7 +152,7 @@ def search_skills():
 
 @app.route('/api/search/advanced', methods=['GET'])
 def advanced_search():
-    """Advanced search with multiple field-specific filters, supporting all columns."""
+    """Advanced search with multiple field-specific filters, supporting all columns including new CRM columns."""
     try:
         # Get all possible search parameters
         params = {}
@@ -168,19 +168,28 @@ def advanced_search():
             'status_1', 'status_2', 'status_3',
             'modified_by_1', 'modified_by_2', 'modified_by_3',
             'last_attempt', 'confidence',
-            'linkedin'
+            'linkedin',
+            # CRM columns
+            'crm_applicationid', 'crm_fullname', 'crm_contactphone', 'crm_telephonenumber',
+            'crm_gender', 'crm_position', 'crm_employmenttype', 'crm_expectedsalary',
+            'crm_dateavailableforemployment', 'crm_currentsalary', 'crm_company',
+            'crm_graduationyear', 'crm_qualitiesattributes', 'crm_careergoals',
+            'crm_additionalinformation', 'crm_appstatus', 'crm_hrinterviewstatus',
+            'crm_technicalrating', 'crm_technicalinterviewcomments', 'crm_hrcomment',
+            'crm_createdon', 'crm_modifiedon', 'crm_howdidyouhearaboutrowad',
+            'crm_extrasocialactivities'
         ]
 
         # Add filter for each column if present in query string
         for col in all_columns:
             value = request.args.get(col, '').strip()
             if value:
-                # Numeric columns (id, years_of_experience, graduation_year)
-                if col in ['id', 'years_of_experience', 'graduation_year', 'confidence']:
+                # Numeric columns (id, years_of_experience, graduation_year, confidence, crm_expectedsalary)
+                if col in ['id', 'years_of_experience', 'graduation_year', 'confidence', 'crm_expectedsalary']:
                     conditions.append(f"{col} = %s")
                     query_params.append(value)
                 else:
-                    conditions.append(f"LOWER({col}) = LOWER(%s)")
+                    conditions.append(f"LOWER(CAST({col} AS TEXT)) = LOWER(%s)")
                     query_params.append(value)
 
         # Combine all conditions with AND
