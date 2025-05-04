@@ -4,6 +4,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 import os
 from dotenv import load_dotenv
+import json
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all domains
@@ -324,6 +325,30 @@ def update_cv_status(cv_id):
                 cur.execute(
                     f"UPDATE pdf_extracted_data SET {', '.join(updates)} WHERE id = %s",
                     values
+                )
+                conn.commit()
+        return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/cv/update_audit_log/<int:cv_id>', methods=['POST'])
+def update_audit_log(cv_id):
+    """
+    Update the audit_log column for a CV.
+    Expects JSON like:
+    {
+        "audit_log": ...   # array, object, or value
+    }
+    """
+    data = request.json
+    if 'audit_log' not in data:
+        return jsonify({"error": "Missing 'audit_log' in request body"}), 400
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "UPDATE pdf_extracted_data SET audit_log = %s WHERE id = %s",
+                    [json.dumps(data['audit_log']), cv_id]
                 )
                 conn.commit()
         return jsonify({"success": True})
