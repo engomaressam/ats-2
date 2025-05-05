@@ -34,7 +34,7 @@ def search_cvs():
         job_title = request.args.get('job_title', '').strip()
         search_type = request.args.get('search_type', 'AND').strip().upper()  # AND or OR
         page = int(request.args.get('page', 1))
-        per_page = int(request.args.get('per_page', 100))
+        per_page = int(request.args.get('per_page', 50))
 
         conditions = []
         params = []
@@ -102,6 +102,9 @@ def search_skills():
         search_type = request.args.get('search_type', 'AND').strip().upper()  # AND or OR
         department = request.args.get('department', '').strip()
         job_title = request.args.get('job_title', '').strip()
+        page = int(request.args.get('page', 1))
+        per_page = int(request.args.get('per_page', 50))
+        offset = (page - 1) * per_page
 
         conditions = []
         params = []
@@ -133,19 +136,29 @@ def search_skills():
 
         with get_db_connection() as conn:
             with conn.cursor() as cur:
+                # Get total count
+                count_query = f"SELECT COUNT(*) FROM pdf_extracted_data WHERE {where_clause}"
+                cur.execute(count_query, params)
+                total_count = cur.fetchone()['count']
+
+                # Get paginated results
                 query = f"""
                     SELECT id, pdf_filename, name, email, department, job_title, 
                            years_of_experience, current_company, location, skills
                     FROM pdf_extracted_data
                     WHERE {where_clause}
+                    ORDER BY id DESC
+                    LIMIT %s OFFSET %s
                 """
-                cur.execute(query, params)
+                cur.execute(query, params + [per_page, offset])
                 results = cur.fetchall()
 
         cvs = [dict(row) for row in results]
         return jsonify({
-            "count": len(cvs),
-            "results": cvs
+            "count": total_count,
+            "results": cvs,
+            "page": page,
+            "per_page": per_page
         })
 
     except Exception as e:
@@ -159,6 +172,9 @@ def advanced_search():
         params = {}
         conditions = []
         query_params = []
+        page = int(request.args.get('page', 1))
+        per_page = int(request.args.get('per_page', 50))
+        offset = (page - 1) * per_page
 
         # List all columns to support as filters and in results
         all_columns = [
@@ -170,6 +186,7 @@ def advanced_search():
             'modified_by_1', 'modified_by_2', 'modified_by_3',
             'last_attempt', 'confidence',
             'linkedin',
+            'current_job', 'ocr_result',
             # CRM columns
             'crm_applicationid', 'crm_fullname', 'crm_contactphone', 'crm_telephonenumber',
             'crm_gender', 'crm_position', 'crm_employmenttype', 'crm_expectedsalary',
@@ -189,6 +206,17 @@ def advanced_search():
                 if col in ['id', 'years_of_experience', 'graduation_year', 'confidence', 'crm_expectedsalary']:
                     conditions.append(f"{col} = %s")
                     query_params.append(value)
+                elif col == 'ocr_result':
+                    # Support multiple keywords and AND/OR logic
+                    search_type = request.args.get('ocr_result_search_type', 'AND').strip().upper()
+                    keywords = [v.strip() for v in value.split(',') if v.strip()]
+                    if keywords:
+                        like_conditions = []
+                        for kw in keywords:
+                            like_conditions.append("LOWER(ocr_result) LIKE LOWER(%s)")
+                            query_params.append(f"%{kw}%")
+                        operator = ' AND ' if search_type == 'AND' else ' OR '
+                        conditions.append(f"({operator.join(like_conditions)})")
                 else:
                     conditions.append(f"LOWER(CAST({col} AS TEXT)) = LOWER(%s)")
                     query_params.append(value)
@@ -198,20 +226,30 @@ def advanced_search():
 
         with get_db_connection() as conn:
             with conn.cursor() as cur:
+                # Get total count
+                count_query = f"SELECT COUNT(*) FROM pdf_extracted_data WHERE {where_clause}"
+                cur.execute(count_query, query_params)
+                total_count = cur.fetchone()['count']
+
+                # Get paginated results
                 query = f"""
                     SELECT {', '.join(all_columns)}
                     FROM pdf_extracted_data
                     WHERE {where_clause}
+                    ORDER BY id DESC
+                    LIMIT %s OFFSET %s
                 """
-                print(f"Executing query: {query} with params: {query_params}")
-                cur.execute(query, query_params)
+                print(f"Executing query: {query} with params: {query_params + [per_page, offset]}")
+                cur.execute(query, query_params + [per_page, offset])
                 results = cur.fetchall()
                 print(f"Query returned {len(results)} results. Sample result: {results[0] if results else 'No results'}")
 
         cvs = [dict(row) for row in results]
         return jsonify({
-            "count": len(cvs),
-            "results": cvs
+            "count": total_count,
+            "results": cvs,
+            "page": page,
+            "per_page": per_page
         })
 
     except Exception as e:
@@ -352,6 +390,26 @@ def update_audit_log(cv_id):
                 )
                 conn.commit()
         return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/cv/audit_log/<int:cv_id>', methods=['GET'])
+def get_audit_log(cv_id):
+    """
+    Retrieve the audit_log column for a specific CV.
+    Returns the audit_log as JSON, or an error if not found.
+    """
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT audit_log FROM pdf_extracted_data WHERE id = %s",
+                    (cv_id,)
+                )
+                result = cur.fetchone()
+                if not result or result['audit_log'] is None:
+                    return jsonify({"error": "No audit_log found for this CV"}), 404
+                return jsonify({"audit_log": result['audit_log']})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

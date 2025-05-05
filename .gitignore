@@ -1,3 +1,4 @@
 /uploads
 .env
 /.venv
+update_current_jobs.py
