@@ -178,9 +178,9 @@ def advanced_search():
 
         # List all columns to support as filters and in results
         all_columns = [
-            'id', 'pdf_filename', 'name', 'email', 'department', 'job_title',
+            'id', 'pdf_filename', 'name', 'email', 'department', 'department2', 'job_title',
             'years_of_experience', 'current_company', 'location', 'skills',
-            'languages', 'certifications', 'project_types', 'university',
+            'languages', 'certifications', 'project_types', 'university', 'university2',
             'graduation_year',
             'status_1', 'status_2', 'status_3',
             'modified_by_1', 'modified_by_2', 'modified_by_3',
@@ -245,6 +245,11 @@ def advanced_search():
                 print(f"Query returned {len(results)} results. Sample result: {results[0] if results else 'No results'}")
 
         cvs = [dict(row) for row in results]
+        # Ensure all expected columns are present in every result
+        for row in cvs:
+            for col in all_columns:
+                if col not in row:
+                    row[col] = None
         return jsonify({
             "count": total_count,
             "results": cvs,
